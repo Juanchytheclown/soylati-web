@@ -1,0 +1,172 @@
+<!DOCTYPE html> <!--Version de Html5-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/jam-icons/css/jam.min.css">
+    <link rel="stylesheet" href="./CSS/style.css">
+    <title>La tia Deco</title>
+</head>
+<body>
+
+    <header class="header">
+        <a href="index.html">
+            <img class="imagen-portada" src="Imagenes/soy la ti sin fondo color.png" controls widt="150" height="150" alt="logotipo">
+        </a>
+
+        <a href="#" class="header__open">
+            <span class="jam jam-menu"></span>
+        </a>
+        <nav class="nav">
+            
+            <ul class="nav__lista">
+                <li><a class="nav__hijo" href="index.html">Home</a></li>
+                <li><a class="nav__hijo" href="Paginas/cocina.html">Cocina</a></li>
+                <li><a class="nav__hijo" href="Paginas/deco-hogar.html">Deco Hogar</a></li>
+                <li><a class="nav__hijo" href="Paginas/textil.html">Textil</a></li>
+                <li><a class="nav__hijo" href="Paginas/contacto.html">Contactanos!</a></li>
+            </ul>
+
+        </nav>
+
+    </header>
+    
+    <main>
+
+        <section class="parallax">
+            <h1 class="parallax__titulo">Decora tu casa!
+                <p class="parallax__texto">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi quam esse qui vel, laboriosam vero, voluptate tempora blanditiis laborum quo eveniet consequatur repudiandae nostrum rerum, quas non autem iusto debitis.
+                </p>
+            </h1>
+            
+
+        </section>
+
+        
+
+        <section class="seccion">
+            <h2 class="titulo-productos">Nuestros productos</h2>
+                
+            <div class=grid>
+                <div class="grid__hijo grid__hijo--1">
+                    <img class="grid__imagen" src="/Imagenes/Textil/amigurumi-amarillo.jpg" alt="amigurumi-amarillo">
+                    <h3 class="grid__texto">Textiles</h3>
+                </div>
+                <div class="grid__hijo grid__hijo--2">
+                    <img class="grid__imagen" src="/Imagenes/Hogar/Portarretratos.jpg" alt="portarretratos">
+                    <h3 class="grid__texto">Deco Hogar</h3>
+                </div>
+                <div class="grid__hijo grid__hijo--3">
+                    <img class="grid__imagen" src="/Imagenes/Cocina/pava-negra.jpg" alt="pava-negra">
+                    <h3 class="grid__texto">Cocina</h3>
+                </div>
+                <div class="grid__hijo grid__hijo--4">
+                    <img class="grid__imagen" src="/Imagenes/Cocina/Especiero.jpg" alt="especiero">
+                    <h3 class="grid__texto">Cocina</h3>
+                </div>
+                <div class="grid__hijo grid__hijo--5">
+                    <img class="grid__imagen" src="/Imagenes/Hogar/macetas.jpg" alt="macetas">
+                    <h3 class="grid__texto">Deco Hogar</h3>
+                </div>
+                <div class="grid__hijo grid__hijo--6">
+                    <img class="grid__imagen" src="/Imagenes/Textil/peluche-sirenita.jpg" alt="peluche-sirenita">
+                    <h3 class="grid__texto">Textiles</h3>
+                </div>
+          
+            </div>
+                
+        </section>
+
+        <h2 class="titulo-productos">Los mas vendidos!</h2>
+
+        <section class="productos">
+            
+            <div class="encuadre">
+               <img src="imagenes/Cocina/pastarella.jpg" height="250" width="250" alt="pastarella">
+               <h3>Olla Para Pastas</h3>
+               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos eius minus ut placeat aut est odio laudantium magni, maxime eos provident? In non consequuntur ducimus  sunt soluta provident harum aperiam.</p>
+            </div>   
+            
+
+            <div class="encuadre">
+                <img src="imagenes/Hogar/perchero.jpg" height="250" width="250" alt="perchero">
+                <h3>Perchero de Madera</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos eius minus ut placeat aut est odio laudantium magni, maxime eos provident? In non consequuntur ducimus  sunt soluta provident harum aperiam.</p>
+            </div>
+
+            <div class="encuadre">
+                <img src="imagenes/Textil/toallon-turquesa.jpg" height="250" width="250" alt="toallon-turquesa">
+                <h3>Toallon Turquesa</h3>
+                <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos eius minus ut placeat aut est odio laudantium magni, maxime eos provident? In non consequuntur ducimus  sunt soluta provident harum aperiam.</P>
+            </div>
+            
+
+        </section>
+
+        <aside>
+            <div class="video">
+               <iframe width="560" height="315" src="https://www.youtube.com/embed/3oAcoV1vRBI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </aside>
+
+        <div class="novedades">
+            <h2>¡Siempre hay novedades para vos!</h2>
+            <br>
+            <p>Suscribite a nuestro Newsletter y recibí novedades de descuentos y nuevos productos.</p>
+            <form action="ruta a donde se envia" method="get o post" enctype="encriptacion">
+              <div>
+                <label for="correo">Email:</label>
+                <input type="email" id="correo" name="correo" placeholder="Ingresar su correo">
+                <button>Enviar</button>
+              </div>
+            </form>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="flex">
+
+               <ul class="menu-bajo">
+                    <li><span>COMPRÁ</span></li>
+                    <li><a class="menu-bajo__hijo" href="Paginas/cocina.html">Cocina</a></li>
+                    <li><a class="menu-bajo__hijo" href="Paginas/deco-hogar.html">Deco Hogar</a></li>
+                    <li><a class="menu-bajo__hijo" href="Paginas/textil.html">Textil</a></li>
+                </ul>
+            
+                <ul class="menu-bajo">
+                    <li>NOSOTROS</li>
+                    <ul class="menu-bajo">
+                        <li>Quienes Somos?</li>
+                        <li>Venta Mayorista</li>
+                    </ul class="menu-bajo">
+                    <li>AYUDA</li>
+                    <ul class="menu-bajo">
+                        <li>Preguntas Frecuentes</li>
+                        <li><a class="menu-bajo__hijo" href="../Paginas/contacto.html">Contacto</a></li>
+                    </ul>
+                </ul>
+            
+                <ul class="menu-bajo">
+                    <li><strong>SEGUINOS</strong></li>
+                    <li>
+                        <a href="https://www.facebook.com/Soylati-103483561816376"><span class="jam jam-facebook-square"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <span class="jam jam-instagram"></span>
+                    </li>
+                    <li>
+                        <span class="jam jam-pinterest-circle"></span>
+                    </li>
+                </ul>
+
+
+        </div>
+            
+    </footer>
+
+</body>
+</html>

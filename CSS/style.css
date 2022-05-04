@@ -1,0 +1,280 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.header{
+    background-color: #a29bfe;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+}
+
+.nav__lista{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.nav__hijo{
+    background-color: #ffffff;
+    padding: 10px;
+    margin: 1rem;
+    border: 1px solid #81229e;
+    text-decoration: none;
+    list-style: none;
+    color: black;
+}
+
+body{
+    background-color: white;
+    
+}
+
+.parallax{        
+    background-image: url(../Imagenes/DECO_HOGAR_banner_web.jpg);
+    background-attachment: fixed;
+    height: 400px;
+    display: flex;
+    align-self: center;
+    display: block;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.parallax__titulo{
+    color: rgb(255, 255, 255);
+    font-size: 50px;
+    text-align: center;
+    font-weight: 200;
+    text-shadow: 2px 2px 2px rgb(0, 0, 0);
+
+}
+
+.parallax__texto{
+    font-style: italic;
+    font-size: 20px;
+}
+
+.productos{
+    display: flex;
+    justify-content: center;
+}
+
+.titulo-productos{
+    font-size: 50px;
+    padding-bottom: 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.texto-productos{
+    padding: 0 50px 0 50px;
+}
+
+.grid{
+    padding: 1rem;
+    margin: 1rem;
+    min-height: 500px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+    "foto1 foto2 foto3"
+    "foto4 foto5 foto6";
+    column-gap: 10px;
+    row-gap: 10px;
+}
+
+.grid__imagen{
+    border-radius: 20px;
+    height: 100%;
+    width: 100%;
+}
+
+.grid__hijo{
+    border: 2px solid #a29bfe;
+    text-align: center;
+    position: relative;
+}
+
+.grid__hijo--1{
+    grid-area: foto1;
+}
+
+.grid__hijo--2{
+    grid-area: foto2;
+}
+
+.grid__hijo--3{
+    grid-area: foto3;
+}
+
+.grid__hijo--4{
+    grid-area: foto4;
+}
+
+.grid__hijo--5{
+    grid-area: foto5;
+}
+
+.grid__hijo--6{
+    grid-area: foto6;
+}
+
+.grid__hijo{
+    border-radius: 20px;
+}
+
+.grid__texto{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(0, 0, 0, 0.5);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+}
+
+.encuadre{
+    background-color: #e1c8f1;
+    color: black;
+    width: 300px;
+    padding: 16px;
+    border: 2px solid #81229e;
+    border-radius: 16px;
+    margin: 16px;
+    display: inline-block;
+    text-align: center;
+}
+
+.encuadre__hijo{
+    margin-bottom: 15px;
+}
+
+footer{
+    background-color: #333333;
+    width: 100%;
+    text-decoration: none;
+    list-style: none;
+    color: white;
+    min-height: 300px;
+
+}
+
+.video{
+    display: none;
+}
+
+.novedades{
+    background-color: aquamarine;
+    color: black;
+    padding: 50px;
+    width: 100%;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.menu-bajo{
+    margin: 20px;
+    list-style: none;
+    flex-direction: column;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.menu-bajo__hijo{
+    background-color: #ffffff;
+    border: 1px solid #e1c8f1;
+    text-decoration: none;
+    list-style: none;
+    color: black;
+    display: inline-block;
+    margin: 5px 0 5px 0;
+}
+
+.header__open{
+    display: none;
+}
+
+.jam-facebook-square{
+    color: white;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 1023px) {
+    .productos{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .parallax{
+        background-size: contain;
+    }
+
+        
+}
+
+@media screen and (max-width: 600px) {
+    .header{
+        flex-direction: row;
+    }
+
+    .imagen-portada{
+        height: 100px;
+        width: 100px;
+    }
+
+    .nav{
+        display: none;
+        flex-direction: row;
+    }
+
+    .grid{
+        display: block;
+    }
+
+    .grid__hijo{
+        margin: 5px;
+    }
+
+    .titulo-productos{
+        color: rgb(255, 255, 255);
+        text-shadow: 2px 2px 2px rgb(0, 0, 0);
+        font-size: x-large;
+    }
+
+    .productos{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .parallax{
+        background-size: 650px;
+        background-position-y: center;
+        height: 275px;
+    }
+
+    .parallax__titulo{
+        font-size: 35px;        
+    }
+
+    .parallax__texto{
+        text-align: justify;
+        font-size: medium;
+        padding: 20px;
+    }
+
+    .header__open{
+        display: block;
+        font-size: 32px;
+        color: white;
+        text-decoration: none;
+    }

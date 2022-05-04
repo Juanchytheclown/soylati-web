@@ -1,0 +1,131 @@
+<!DOCTYPE html> <!--Version de Html5-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/jam-icons/css/jam.min.css">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <title>La tia Deco</title>
+</head>
+<body>
+
+    <header class="header">
+        <a href="../index.html">
+            <img class="imagen-portada" src="../Imagenes/soy la ti sin fondo color.png" controls widt="150" height="150" alt="logotipo">
+        </a>
+
+        <a href="#" class="header__open">
+            <span class="jam jam-menu"></span>
+        </a>
+        <nav class="nav">
+            
+            <ul class="nav__lista">
+                <li><a class="nav__hijo" href="../index.html">Home</a></li>
+                <li><a class="nav__hijo" href="../Paginas/cocina.html">Cocina</a></li>
+                <li><a class="nav__hijo" href="../Paginas/deco-hogar.html">Deco Hogar</a></li>
+                <li><a class="nav__hijo" href="../Paginas/textil.html">Textil</a></li>
+                <li><a class="nav__hijo" href="../Paginas/contacto.html">Contactanos!</a></li>
+            </ul>
+
+        </nav>
+
+    </header>
+    
+    <main>
+        <section>
+            <h1>
+                Completa el siguiente formulario
+            </h1>
+            <form>
+                <div>
+                    <label for="nombre">Nombre Completo:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre completo">
+                </div>
+
+                <div>
+                    <label for="edad">Edad:</label>
+                    <input type="number" id="edad" name="edad" placeholder="Ingresar su edad">
+                </div>
+        
+                <div>
+                    <label for="correo">Email:</label>
+                    <input type="email" id="correo" name="correo" placeholder="Ingresar su correo">
+                </div>
+             
+                <div>
+                    <label for="comentario">Comentario:</label>
+                    <textarea placeholder="Ingrese su comentario" name="comentario" id="comentario" cols="20" rows="1"></textarea>
+                </div>
+
+                <br>
+
+                <button>Enviar</button>
+            </form>
+            
+        </section>
+
+        <aside>
+
+        </aside>
+
+    <div class="novedades">
+            <h2>¡Siempre hay novedades para vos!</h2>
+            <br>
+            <p>Suscribite a nuestro Newsletter y recibí novedades de descuentos y nuevos productos.</p>
+            <form action="ruta a donde se envia" method="get o post" enctype="encriptacion">
+              <div>
+                <label for="correo">Email:</label>
+                <input type="email" id="correo" name="correo" placeholder="Ingresar su correo">
+                <button>Enviar</button>
+              </div>
+            </form>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="flex">
+
+               <ul class="menu-bajo">
+                    <li><span>COMPRÁ</span></li>
+                    <li><a class="menu-bajo__hijo" href="../index.html">Home</a></li>
+                    <li><a class="menu-bajo__hijo" href="../Paginas/cocina.html">Cocina</a></li>
+                    <li><a class="menu-bajo__hijo" href="../Paginas/deco-hogar.html">Deco Hogar</a></li>
+                    <li><a class="menu-bajo__hijo" href="../Paginas/textil.html">Textil</a></li>
+                </ul>
+            
+                <ul class="menu-bajo">
+                    <li>NOSOTROS</li>
+                    <ul class="menu-bajo">
+                        <li>Quienes Somos?</li>
+                        <li>Venta Mayorista</li>
+                    </ul class="menu-bajo">
+                    <li>AYUDA</li>
+                    <ul class="menu-bajo">
+                        <li>Preguntas Frecuentes</li>
+                        <li><a class="menu-bajo__hijo" href="../Paginas/contacto.html">Contacto</a></li>
+                    </ul>
+                </ul>
+            
+                <ul class="menu-bajo">
+                    <li><strong>SEGUINOS</strong></li>
+                    <li>
+                        <a href="https://www.facebook.com/Soylati-103483561816376"><span class="jam jam-facebook-square"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <span class="jam jam-instagram"></span>
+                    </li>
+                    <li>
+                        <span class="jam jam-pinterest-circle"></span>
+                    </li>
+                </ul>
+
+
+        </div>
+            
+    </footer>
+
+</body>
+</html>
