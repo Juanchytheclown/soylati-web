@@ -5,7 +5,7 @@
 }
 
 .header{
-    background-color: #a29bfe;
+    background-color: #e9b4bd;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -18,21 +18,21 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: sans-serif;
 }
 
 .nav__hijo{
-    background-color: #ffffff;
+    background-color: #856a78;
     padding: 10px;
     margin: 1rem;
-    border: 1px solid #81229e;
     text-decoration: none;
     list-style: none;
-    color: black;
+    color: white;
+    border-radius: 10px;
 }
 
 body{
-    background-color: white;
+    background-color: #f1eced;
     
 }
 
@@ -77,6 +77,38 @@ body{
     padding: 0 50px 0 50px;
 }
 
+.tracking-in-expand:hover {
+	-webkit-animation: tracking-in-expand 1.5s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	        animation: tracking-in-expand 1.5s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+@-webkit-keyframes tracking-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+
+@keyframes tracking-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+  
+
 .grid{
     padding: 1rem;
     margin: 1rem;
@@ -89,38 +121,70 @@ body{
     "foto4 foto5 foto6";
     column-gap: 10px;
     row-gap: 10px;
+    transform: scale(0.80);
 }
 
 .grid__imagen{
     border-radius: 20px;
     height: 100%;
     width: 100%;
+    object-fit: contain;
 }
 
 .grid__hijo{
-    border: 2px solid #a29bfe;
+    border: 2px solid #856a78;
     text-align: center;
     position: relative;
 }
 
 .grid__hijo--1{
     grid-area: foto1;
+    animation-name: amigurrumi;
+    animation-duration: 3s;
+    animation-iteration-count: 3;
+    animation-timing-function: ease-in-out;
+    animation-delay: 5s;
+}
+
+@keyframes amigurrumi {
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(360deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+    
 }
 
 .grid__hijo--2{
     grid-area: foto2;
+    transition: transform 2s;
+}
+
+.grid__hijo--2:hover{
+    transform: scale(0.5);
 }
 
 .grid__hijo--3{
     grid-area: foto3;
+    transform: rotate(-15deg);
 }
 
 .grid__hijo--4{
     grid-area: foto4;
+    transform: rotate(15deg);
 }
 
 .grid__hijo--5{
     grid-area: foto5;
+    transition: transform 2s;
+}
+
+.grid__hijo--5:hover{
+    transform: scale(1.3);
 }
 
 .grid__hijo--6{
@@ -142,11 +206,11 @@ body{
 }
 
 .encuadre{
-    background-color: #e1c8f1;
+    background-color: #f1eced;
     color: black;
     width: 300px;
     padding: 16px;
-    border: 2px solid #81229e;
+    border: 2px solid #856a78;
     border-radius: 16px;
     margin: 16px;
     display: inline-block;
@@ -172,8 +236,8 @@ footer{
 }
 
 .novedades{
-    background-color: aquamarine;
-    color: black;
+    background-image: linear-gradient(to right, #e68998, rgb(102, 177, 102));
+    color: white;
     padding: 50px;
     width: 100%;
 }
@@ -187,17 +251,18 @@ footer{
     margin: 20px;
     list-style: none;
     flex-direction: column;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: sans-serif;
 }
 
 .menu-bajo__hijo{
-    background-color: #ffffff;
-    border: 1px solid #e1c8f1;
+    display: inline-block;
+    background-color: #856a78;
+    padding: 10px;
+    margin: 1rem;
     text-decoration: none;
     list-style: none;
-    color: black;
-    display: inline-block;
-    margin: 5px 0 5px 0;
+    color: white;
+    border-radius: 10px;
 }
 
 .header__open{
@@ -278,3 +343,4 @@ footer{
         color: white;
         text-decoration: none;
     }
+}
