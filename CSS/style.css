@@ -23,12 +23,32 @@
 
 .nav__hijo{
     background-color: #856a78;
-    padding: 10px;
-    margin: 1rem;
-    text-decoration: none;
-    list-style: none;
     color: white;
     border-radius: 10px;
+}
+
+.nav-link {
+    padding-right: 0;
+    padding-left: 10px;
+    margin: 5px;
+}
+
+.navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link {
+    color: white;
+    text-align: center;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: white;
+    text-align: center;
+}
+
+.container-fluid{
+    background-color: #e9b4bd;
+}
+
+.bg-light {
+    --bs-bg-opacity: 0;
 }
 
 body{
@@ -121,7 +141,7 @@ body{
     "foto4 foto5 foto6";
     column-gap: 10px;
     row-gap: 10px;
-    transform: scale(0.80);
+    transform: scale(0.70);
 }
 
 .grid__imagen{
@@ -203,6 +223,10 @@ body{
     color: white;
     padding: 0.5rem 1rem;
     border-radius: 20px;
+}
+
+.carousel-foto{
+    object-fit: cover;
 }
 
 .encuadre{
