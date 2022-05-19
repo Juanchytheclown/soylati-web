@@ -97,7 +97,7 @@ body {
 }
 
 .texto-productos {
-  padding: 0 50px 0 50px;
+  text-align: center;
 }
 
 .tracking-in-expand:hover {
