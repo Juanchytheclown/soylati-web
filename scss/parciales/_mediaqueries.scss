@@ -1,0 +1,70 @@
+@media screen and (max-width: 1023px) {
+    .productos{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .parallax{
+        background-size: contain;
+    }
+
+        
+}
+
+@media screen and (max-width: 600px) {
+    .header{
+        flex-direction: row;
+    }
+
+    .imagen-portada{
+        height: 100px;
+        width: 100px;
+    }
+
+    .nav{
+        display: none;
+        flex-direction: row;
+    }
+
+    .grid{
+        display: block;
+    }
+
+    .grid__hijo{
+        margin: 5px;
+    }
+
+    .titulo-productos{
+        color: rgb(255, 255, 255);
+        text-shadow: 2px 2px 2px rgb(0, 0, 0);
+        font-size: x-large;
+    }
+
+    .productos{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .parallax{
+        background-size: 650px;
+        background-position-y: center;
+        height: 275px;
+    }
+
+    .parallax__titulo{
+        font-size: 35px;        
+    }
+
+    .parallax__texto{
+        text-align: justify;
+        font-size: medium;
+        padding: 20px;
+    }
+
+    .header__open{
+        display: block;
+        font-size: 32px;
+        color: white;
+        text-decoration: none;
+    }
+}
