@@ -13,6 +13,34 @@ body {
   padding: 25px;
 }
 
+.votacion, .votacion--cocina, .votacion--hogar, .votacion--textil {
+  min-width: 250px;
+  min-height: 250px;
+  padding: 1rem;
+  background-color: #dfd7d9;
+  text-align: center;
+  color: black;
+  border: 1px solid black;
+}
+
+.votacion--cocina {
+  min-height: 150px;
+  min-width: 150px;
+  margin: 1rem;
+}
+
+.votacion--hogar {
+  min-height: 150px;
+  min-width: 150px;
+  margin: 1rem;
+}
+
+.votacion--textil {
+  min-height: 150px;
+  min-width: 150px;
+  margin: 1rem;
+}
+
 .header {
   background-color: #e9b4bd;
   display: flex;
@@ -246,8 +274,11 @@ footer {
   min-height: 300px;
 }
 
-.video {
-  display: none;
+.eleginos {
+  background-image: linear-gradient(to right, #7a7a7a, #e68998);
+  color: white;
+  padding: 50px;
+  width: 100%;
 }
 
 .novedades {
@@ -291,6 +322,71 @@ button:not(:disabled) {
   display: none;
 }
 
+.col-1 {
+  width: 16.66667%;
+  background-color: #4e4e4e;
+  border-radius: 10%;
+  color: white;
+  text-decoration: overline;
+}
+
+.col-2 {
+  width: 33.33333%;
+  background-color: #4e4e4e;
+  border-radius: 10%;
+  color: white;
+  text-decoration: overline;
+}
+
+.col-3 {
+  width: 50%;
+  background-color: #4e4e4e;
+  border-radius: 10%;
+  color: white;
+  text-decoration: overline;
+}
+
+.col-4 {
+  width: 66.66667%;
+  background-color: #4e4e4e;
+  border-radius: 10%;
+  color: white;
+  text-decoration: overline;
+}
+
+.col-5 {
+  width: 83.33333%;
+  background-color: #4e4e4e;
+  border-radius: 10%;
+  color: white;
+  text-decoration: overline;
+}
+
+.col-6 {
+  width: 100%;
+  background-color: #4e4e4e;
+  border-radius: 10%;
+  color: white;
+  text-decoration: overline;
+}
+
+/* Usando el mapa */
+.btn-twitter {
+  background-color: #55acee;
+}
+
+.btn-facebook {
+  background-color: #3a5795;
+}
+
+.btn-instagram {
+  background-color: #C25E30;
+}
+
+.btn-pinterest {
+  background-color: #e60f0f;
+}
+
 .jam-facebook-square:before {
   color: white;
   text-decoration: none;
@@ -299,6 +395,7 @@ button:not(:disabled) {
 
 a {
   text-decoration: none;
+  color: white;
 }
 
 @media screen and (max-width: 1023px) {

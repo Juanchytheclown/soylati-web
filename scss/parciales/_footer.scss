@@ -8,12 +8,15 @@ footer{
 
 }
 
-.video{
-    display: none;
+.eleginos{
+    background-image: linear-gradient(to right, #7a7a7a, #e68998);
+    color: white;
+    padding: 50px;
+    width: 100%;
 }
 
 .novedades{
-    background-image: linear-gradient(to right, #e68998, rgb(102, 177, 102));
+    background-image: linear-gradient(to right, #e68998, #66b166);
     color: white;
     padding: 50px;
     width: 100%;
@@ -53,6 +56,30 @@ button:not(:disabled) {
     display: none;
 }
 
+@for $i from 1 through 6 {
+    .col-#{$i} {
+        width: (100% / 6) * $i;
+        background-color: #4e4e4e;
+        border-radius: 10%;
+        color: white;
+        text-decoration: overline;
+    }
+}
+
+$redes: ( 
+ twitter: #55acee,
+ facebook: #3a5795,
+ instagram: #C25E30,
+ pinterest: #e60f0f
+); 
+
+/* Usando el mapa */
+@each $clave, $valor in $redes { 
+    .btn-#{$clave} {
+        background-color: $valor;
+    }
+}
+
 .jam-facebook-square:before {
     color: white;
     text-decoration: none;
@@ -61,4 +88,5 @@ button:not(:disabled) {
 
 a {
     text-decoration: none;
+    color: white;
 }

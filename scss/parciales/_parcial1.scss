@@ -13,3 +13,36 @@ body{
     min-height: 300px;
     padding: 25px;
 }
+
+.votacion {
+    min-width:250px;
+    min-height:250px;
+    padding: 1rem;
+    background-color: #dfd7d9;
+    text-align:center;
+    color:black;
+    border:1px solid black;
+
+    &--cocina {
+        @extend .votacion;
+        min-height: 150px;
+        min-width: 150px;
+        margin: 1rem;
+    }
+
+    &--hogar {
+        @extend .votacion;
+        min-height: 150px;
+        min-width: 150px;
+        margin: 1rem;
+
+    }
+
+    &--textil {
+        @extend .votacion;
+        min-height: 150px;
+        min-width: 150px;
+        margin: 1rem;
+
+    }
+}
