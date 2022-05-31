@@ -1,5 +1,0 @@
-Se aplicaron Titles y Descripcion en los meta.
-Se completaron los keywords en cada pagina
-Se agregaron H1 H2 etc...
-Se modificaron los Lorem por textos reales
-
