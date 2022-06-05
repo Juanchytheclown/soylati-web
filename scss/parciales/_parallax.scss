@@ -1,5 +1,5 @@
 .parallax{        
-    background-image: url(../Imagenes/DECO_HOGAR_banner_web.jpg);
+    background-image: url(../Imagenes/tocador_ba_o_banner_web.jpg);
     background-attachment: fixed;
     height: 400px;
     display: flex;
@@ -7,20 +7,6 @@
     display: block;
     background-size: contain;
     background-repeat: no-repeat;
-
-    &__titulo{
-        color: rgb(255, 255, 255);
-        font-size: 50px;
-        text-align: center;
-        font-weight: 200;
-        text-shadow: 2px 2px 2px rgb(0, 0, 0);
-    
-    }
-
-    &__texto{
-        font-style: italic;
-        font-size: 20px;
-    }
 }
 
 

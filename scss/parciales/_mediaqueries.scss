@@ -36,9 +36,14 @@
     }
 
     .titulo-productos{
-        color: rgb(255, 255, 255);
-        text-shadow: 2px 2px 2px rgb(0, 0, 0);
-        font-size: x-large;
+        font-size: 50px;
+        text-align: center;
+    }
+
+    .titulo-instagram{
+        font-size: 50px;
+        text-align: center;
+        font-weight: 200;
     }
 
     .productos{
@@ -52,11 +57,11 @@
         height: 275px;
     }
 
-    .parallax__titulo{
-        font-size: 35px;        
+    .principal__titulo{
+        font-size: 70px;        
     }
 
-    .parallax__texto{
+    .principal__texto{
         text-align: justify;
         font-size: medium;
         padding: 20px;
@@ -68,4 +73,5 @@
         color: white;
         text-decoration: none;
     }
+
 }

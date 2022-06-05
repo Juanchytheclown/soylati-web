@@ -90,7 +90,7 @@ body {
 }
 
 .parallax {
-  background-image: url(../Imagenes/DECO_HOGAR_banner_web.jpg);
+  background-image: url(../Imagenes/tocador_ba_o_banner_web.jpg);
   background-attachment: fixed;
   height: 400px;
   display: flex;
@@ -100,15 +100,27 @@ body {
   background-repeat: no-repeat;
 }
 
-.parallax__titulo {
-  color: white;
-  font-size: 50px;
+.principal {
+  background-color: #f1eced;
+  color: black;
+  width: auto;
+  padding: 16px;
+  border: 2px solid #856a78;
+  border-radius: 16px;
+  margin: 16px;
+  display: inline-block;
   text-align: center;
-  font-weight: 200;
-  text-shadow: 2px 2px 2px black;
 }
 
-.parallax__texto {
+.principal__titulo {
+  color: black;
+  font-size: 70px;
+  text-align: center;
+  font-weight: 200;
+  text-shadow: 2px 2px 2px #856a78;
+}
+
+.principal__texto {
   font-style: italic;
   font-size: 20px;
 }
@@ -119,10 +131,9 @@ body {
 }
 
 .titulo-productos {
-  font-size: 50px;
-  padding-bottom: 20px;
-  margin-top: 20px;
   text-align: center;
+  margin-bottom: 2rem;
+  font-size: 50px;
 }
 
 .texto-productos {
@@ -132,19 +143,6 @@ body {
 .tracking-in-expand:hover {
   -webkit-animation: tracking-in-expand 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) both;
   animation: tracking-in-expand 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) both;
-}
-
-@-webkit-keyframes tracking-in-expand {
-  0% {
-    letter-spacing: -0.5em;
-    opacity: 0;
-  }
-  40% {
-    opacity: 0.6;
-  }
-  100% {
-    opacity: 1;
-  }
 }
 
 @keyframes tracking-in-expand {
@@ -158,43 +156,6 @@ body {
   100% {
     opacity: 1;
   }
-}
-
-.grid {
-  padding: 1rem;
-  margin: 1rem;
-  min-height: 500px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-template-areas: "foto1 foto2 foto3" "foto4 foto5 foto6";
-  column-gap: 10px;
-  row-gap: 10px;
-  transform: scale(0.7);
-}
-
-.grid__hijo {
-  border: 2px solid #856a78;
-  text-align: center;
-  position: relative;
-  border-radius: 20px;
-}
-
-.grid__imagen {
-  border-radius: 20px;
-  height: 100%;
-  width: 100%;
-  object-fit: contain;
-}
-
-.grid__texto {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
 }
 
 .grid__hijo--1 {
@@ -236,9 +197,26 @@ body {
 
 .grid__hijo--6 {
   grid-area: foto6;
+  animation-name: toallon;
+  animation-duration: 3s;
+  animation-iteration-count: 3;
+  animation-timing-function: ease-in-out;
+  animation-delay: 5s;
 }
 
 @keyframes amigurrumi {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes toallon {
   0% {
     transform: rotate(0deg);
   }
@@ -266,6 +244,191 @@ body {
   margin-bottom: 15px;
 }
 
+.instagram {
+  background-color: #f1eced;
+  color: black;
+  width: 300px;
+  padding: 16px;
+  border-radius: 16px;
+  margin: 16px;
+  display: inline-block;
+  text-align: center;
+}
+
+.titulo-instagram {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 50px;
+}
+
+.logo-instagram {
+  margin-right: 20px;
+  height: 50px;
+  align-self: center;
+}
+
+.encuadre {
+  background-color: #f1eced;
+  color: black;
+  width: 300px;
+  padding: 16px;
+  border: 2px solid #856a78;
+  border-radius: 16px;
+  margin: 16px;
+  display: inline-block;
+  text-align: center;
+}
+
+.encuadre__hijo {
+  margin-bottom: 15px;
+}
+
+.grid {
+  padding: 2rem 0;
+  background-color: #f1eced;
+  text-align: center;
+}
+
+.grid__contenedor {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.grid__title {
+  font-size: 60px;
+  margin-bottom: 2rem;
+  color: black;
+}
+
+.grid__texto {
+  font-size: 30px;
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+
+.grid__subtitle {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 0.5rem 1rem;
+  margin-right: 5px;
+  border-radius: 20px;
+  font-size: 20px;
+}
+
+.grid__grilla {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 220px);
+  grid-template-areas: "ele1 ele2 ele3 ele4"  "ele5 ele6 ele7 ele8";
+  gap: 1rem;
+}
+
+.grid__item {
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.grid__item--cocina {
+  background-color: #ceb4e2;
+}
+
+.grid__img {
+  position: absolute;
+  top: 0;
+  left: -0.5rem;
+  transform: rotate(30deg);
+  transition: transform 1s;
+}
+
+.grid__item--1 {
+  grid-area: ele1;
+  background-color: #eed9de;
+}
+
+.grid__item--1:hover {
+  transform: rotate(360deg);
+  transition: transform 3s;
+}
+
+.grid__item--2 {
+  grid-area: ele2;
+  background-color: #f0d5b0;
+  transition: transform 1s;
+}
+
+.grid__item--2:hover {
+  transform: scale(1.1);
+}
+
+.grid__item--3 {
+  grid-area: ele3;
+  background-color: #ceb4e2;
+  transform: rotate(-5deg);
+}
+
+.grid__item--3:hover {
+  transform: rotate(0deg);
+}
+
+.grid__item--4 {
+  grid-area: ele4;
+  background-color: #eed9de;
+  transition: transform 1s;
+}
+
+.grid__item--4:hover {
+  transform: scale(1.1);
+}
+
+.grid__item--5 {
+  grid-area: ele5;
+  background-color: #f0d5b0;
+  transform: rotate(5deg);
+}
+
+.grid__item--5:hover {
+  transform: rotate(0deg);
+}
+
+.grid__item--6 {
+  grid-area: ele6;
+  background-color: #ceb4e2;
+  transition: transform 1s;
+}
+
+.grid__item--6:hover {
+  transform: scale(1.1);
+}
+
+.grid__item--7 {
+  grid-area: ele7;
+  background-color: #eed9de;
+  transition: transform 1s;
+}
+
+.grid__item--7:hover {
+  transform: scale(1.1);
+}
+
+.grid__item--8 {
+  grid-area: ele8;
+  background-color: #ceb4e2;
+  transition: transform 1s;
+}
+
+.grid__item--8:hover {
+  transform: scale(1.1);
+}
+
+.grid__img:hover {
+  transform: rotate(0deg);
+}
+
 footer {
   background-color: #333333;
   width: 100%;
@@ -276,14 +439,14 @@ footer {
 }
 
 .eleginos {
-  background-image: linear-gradient(to right, #7a7a7a, #e68998);
+  background-image: linear-gradient(to right, #ceb4e2, #333333);
   color: white;
   padding: 50px;
   width: 100%;
 }
 
 .novedades {
-  background-image: linear-gradient(to right, #e68998, #66b166);
+  background-image: linear-gradient(to right, #333333, #f0d5b0);
   color: white;
   padding: 50px;
   width: 100%;
@@ -319,13 +482,18 @@ button:not(:disabled) {
   border-radius: 10px;
 }
 
+.hover-menu :hover {
+  background-color: #ffffff;
+  color: #856a78;
+}
+
 .header__open {
   display: none;
 }
 
 .col-1 {
   width: 16.66667%;
-  background-color: #4e4e4e;
+  background-color: #8d53b4;
   border-radius: 10%;
   color: white;
   text-decoration: overline;
@@ -333,7 +501,7 @@ button:not(:disabled) {
 
 .col-2 {
   width: 33.33333%;
-  background-color: #4e4e4e;
+  background-color: #8d53b4;
   border-radius: 10%;
   color: white;
   text-decoration: overline;
@@ -341,7 +509,7 @@ button:not(:disabled) {
 
 .col-3 {
   width: 50%;
-  background-color: #4e4e4e;
+  background-color: #8d53b4;
   border-radius: 10%;
   color: white;
   text-decoration: overline;
@@ -349,7 +517,7 @@ button:not(:disabled) {
 
 .col-4 {
   width: 66.66667%;
-  background-color: #4e4e4e;
+  background-color: #8d53b4;
   border-radius: 10%;
   color: white;
   text-decoration: overline;
@@ -357,7 +525,7 @@ button:not(:disabled) {
 
 .col-5 {
   width: 83.33333%;
-  background-color: #4e4e4e;
+  background-color: #8d53b4;
   border-radius: 10%;
   color: white;
   text-decoration: overline;
@@ -365,7 +533,7 @@ button:not(:disabled) {
 
 .col-6 {
   width: 100%;
-  background-color: #4e4e4e;
+  background-color: #8d53b4;
   border-radius: 10%;
   color: white;
   text-decoration: overline;
@@ -392,6 +560,11 @@ button:not(:disabled) {
   color: white;
   text-decoration: none;
   list-style: none;
+}
+
+.hoverface :hover {
+  background-color: #333333;
+  color: #ffffff;
 }
 
 a {
@@ -429,9 +602,13 @@ a {
     margin: 5px;
   }
   .titulo-productos {
-    color: white;
-    text-shadow: 2px 2px 2px black;
-    font-size: x-large;
+    font-size: 50px;
+    text-align: center;
+  }
+  .titulo-instagram {
+    font-size: 50px;
+    text-align: center;
+    font-weight: 200;
   }
   .productos {
     flex-direction: column;
@@ -442,10 +619,10 @@ a {
     background-position-y: center;
     height: 275px;
   }
-  .parallax__titulo {
-    font-size: 35px;
+  .principal__titulo {
+    font-size: 70px;
   }
-  .parallax__texto {
+  .principal__texto {
     text-align: justify;
     font-size: medium;
     padding: 20px;

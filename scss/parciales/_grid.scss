@@ -1,0 +1,147 @@
+.grid {
+    padding: 2rem 0;
+    background-color: #f1eced;
+    text-align: center;
+
+    &__contenedor {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    &__title {
+        font-size: 60px;
+        margin-bottom: 2rem;
+        color: rgb(0, 0, 0);
+    }
+
+    &__texto {
+        font-size: 30px;
+        margin-bottom: 2rem;
+        font-style: italic;
+    }
+
+    &__subtitle{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        padding: 0.5rem 1rem;
+        margin-right: 5px;
+        border-radius: 20px;
+        font-size: 20px;
+    }
+
+    &__grilla {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 220px);    
+        grid-template-areas: 
+            "ele1 ele2 ele3 ele4" 
+            "ele5 ele6 ele7 ele8";
+        gap: 1rem;
+    }
+
+    &__item {
+        border-radius: 8px;
+        position: relative;
+        overflow: hidden;
+        text-decoration: none;
+    }
+
+    &__item--cocina {
+        background-color: $color-cocina;
+    }
+    
+    &__img {
+        position: absolute;
+        top: 0;
+        left: -0.5rem;
+        transform: rotate(30deg);
+        transition: transform 1s;
+    }    
+}
+
+.grid__item--1 {
+    grid-area: ele1;
+    background-color: #eed9de;
+}
+
+.grid__item--1:hover{
+    transform: rotate(360deg);
+    transition: transform 3s;
+}
+
+.grid__item--2{
+    grid-area: ele2;
+    background-color: #f0d5b0;
+    transition: transform 1s;
+}
+
+.grid__item--2:hover{
+    transform: scale(1.1);
+}
+
+.grid__item--3 {
+    grid-area: ele3;
+    background-color: #ceb4e2;
+    transform: rotate(-5deg);
+}
+
+.grid__item--3:hover{
+    transform: rotate(0deg);
+}
+
+.grid__item--4 {
+    grid-area: ele4;
+    background-color: #eed9de;
+    transition: transform 1s;
+}
+
+.grid__item--4:hover{
+    transform: scale(1.1);
+}
+
+.grid__item--5 {
+    grid-area: ele5;
+    background-color: #f0d5b0;
+    transform: rotate(5deg);
+}
+
+.grid__item--5:hover{
+    transform: rotate(0deg);
+}
+
+.grid__item--6 {
+    grid-area: ele6;
+    background-color: #ceb4e2;
+    transition: transform 1s;
+}
+
+.grid__item--6:hover{
+    transform: scale(1.1);
+}
+
+.grid__item--7 {
+    grid-area: ele7;
+    background-color: #eed9de;
+    transition: transform 1s;
+}
+
+.grid__item--7:hover{
+    transform: scale(1.1);
+}
+
+.grid__item--8 {
+    grid-area: ele8;
+    background-color: #ceb4e2;
+    transition: transform 1s;
+}
+
+.grid__item--8:hover{
+    transform: scale(1.1);
+}
+
+.grid__img:hover{
+    transform: rotate(0deg);
+}

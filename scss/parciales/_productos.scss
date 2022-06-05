@@ -1,35 +1,48 @@
+.principal{
+    background-color: #f1eced;
+    color: black;
+    width: auto;
+    padding: 16px;
+    border: 2px solid $color-botones;
+    border-radius: 16px;
+    margin: 16px;
+    display: inline-block;
+    text-align: center;
+
+    &__titulo{
+        color: rgb(0, 0, 0);
+        font-size: 70px;
+        text-align: center;
+        font-weight: 200;
+        text-shadow: 2px 2px 2px $color-botones;
+    
+    }
+
+    &__texto{
+        font-style: italic;
+        font-size: 20px;
+    }
+
+}
+
 .productos{
     display: flex;
     justify-content: center;
 }
 
 .titulo-productos{
-    font-size: 50px;
-    padding-bottom: 20px;
-    margin-top: 20px;
     text-align: center;
+    margin-bottom: 2rem;
+    font-size: 50px;
 }
 
 .texto-productos{
-text-align: center;
+    text-align: center;
 }
 
 .tracking-in-expand:hover {
 	-webkit-animation: tracking-in-expand 1.5s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 	        animation: tracking-in-expand 1.5s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-}
-
-@-webkit-keyframes tracking-in-expand {
-    0% {
-      letter-spacing: -0.5em;
-      opacity: 0;
-    }
-    40% {
-      opacity: 0.6;
-    }
-    100% {
-      opacity: 1;
-    }
 }
 
 @keyframes tracking-in-expand {
@@ -45,45 +58,6 @@ text-align: center;
     }
 }
   
-
-.grid{
-    padding: 1rem;
-    margin: 1rem;
-    min-height: 500px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-areas: 
-    "foto1 foto2 foto3"
-    "foto4 foto5 foto6";
-    column-gap: 10px;
-    row-gap: 10px;
-    transform: scale(0.70);
-
-    &__hijo{
-        border: 2px solid $color-botones;
-        text-align: center;
-        position: relative;
-        border-radius: 20px;
-    }
-
-    &__imagen{
-        border-radius: 20px;
-        height: 100%;
-        width: 100%;
-        object-fit: contain;
-    }
-
-    &__texto{
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        background-color: rgba(0, 0, 0, 0.5);
-        color: white;
-        padding: 0.5rem 1rem;
-        border-radius: 20px;
-    }
-}
 
 .grid__hijo--1{
     grid-area: foto1;
@@ -124,6 +98,11 @@ text-align: center;
 
 .grid__hijo--6{
     grid-area: foto6;
+    animation-name: toallon;
+    animation-duration: 3s;
+    animation-iteration-count: 3;
+    animation-timing-function: ease-in-out;
+    animation-delay: 5s;
 }
 
 @keyframes amigurrumi {
@@ -137,6 +116,60 @@ text-align: center;
         transform: rotate(0deg);
     }
     
+}
+
+@keyframes toallon {
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(360deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+    
+}
+
+.encuadre{
+    background-color: #f1eced;
+    color: black;
+    width: 300px;
+    padding: 16px;
+    border: 2px solid $color-botones;
+    border-radius: 16px;
+    margin: 16px;
+    display: inline-block;
+    text-align: center;
+
+    &__hijo{
+        margin-bottom: 15px;
+    }
+}
+
+
+.instagram{
+    background-color: #f1eced;
+    color: black;
+    width: 300px;
+    padding: 16px;
+    border-radius: 16px;
+    margin: 16px;
+    display: inline-block;
+    text-align: center;
+
+}
+
+.titulo-instagram{
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 50px;
+}
+
+.logo-instagram{
+    margin-right: 20px;
+    height: 50px;
+    align-self: center;
 }
 
 .encuadre{
