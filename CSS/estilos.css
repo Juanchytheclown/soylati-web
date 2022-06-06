@@ -111,6 +111,28 @@ body {
   background-repeat: no-repeat;
 }
 
+.instagram {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+iframe {
+  border-radius: 10px;
+  box-shadow: 0 15px 15px 0 rgba(0, 0, 0, 0.15);
+}
+
+.titulo-instagram {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 50px;
+}
+
+.logo-instagram {
+  margin-right: 20px;
+  height: 50px;
+  align-self: center;
+}
+
 .masvendidos {
   display: flex;
   justify-content: center;
@@ -155,28 +177,6 @@ body {
   100% {
     opacity: 1;
   }
-}
-
-.instagram {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-iframe {
-  border-radius: 10px;
-  box-shadow: 0 15px 15px 0 rgba(0, 0, 0, 0.15);
-}
-
-.titulo-instagram {
-  text-align: center;
-  margin-bottom: 2rem;
-  font-size: 50px;
-}
-
-.logo-instagram {
-  margin-right: 20px;
-  height: 50px;
-  align-self: center;
 }
 
 .grid {
@@ -245,6 +245,18 @@ iframe {
   left: -0.5rem;
   transform: rotate(30deg);
   transition: transform 1s;
+}
+
+#grid-fondo-cocina {
+  background-color: #ceb4e2;
+}
+
+#grid-fondo-deco {
+  background-color: #f0d5b0;
+}
+
+#grid-fondo-textil {
+  background-color: #eed9de;
 }
 
 .grid__item--1 {
