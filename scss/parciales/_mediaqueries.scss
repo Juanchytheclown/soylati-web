@@ -1,7 +1,13 @@
 @media screen and (max-width: 1023px) {
-    .productos{
+    .masvendidos{
         flex-direction: column;
         align-items: center;
+    }
+
+    .masvendidos-titulo{
+        font-size: 40px;
+        padding: 1rem;
+        margin: 0;
     }
 
     .parallax{
@@ -26,18 +32,40 @@
         flex-direction: row;
     }
 
-    .grid{
-        display: block;
-        transform: scale(0.90);
-    }
+    .grid__grilla {
+        padding: 1rem;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(8, 220px);
+        grid-template-areas: 
+            "ele1"
+            "ele2"
+            "ele3"
+            "ele4"
+            "ele5"
+            "ele6"
+            "ele7"
+            "ele8";
+   }
 
-    .grid__hijo{
-        margin: 5px;
-    }
-
-    .titulo-productos{
+    .grid__title{
         font-size: 50px;
+    }
+
+    .grid__subtitle{
+        font-size: 40px;
+    }
+
+    .grid__texto{
+        font-size: 20px;
+        padding: 1rem;
+    }
+
+    .instagram{
+        flex-direction: column;
+        padding: 1rem;
+        align-content: center;
         text-align: center;
+    
     }
 
     .titulo-instagram{
@@ -46,32 +74,29 @@
         font-weight: 200;
     }
 
-    .productos{
+    .masvendidos{
         flex-direction: column;
         align-items: center;
+    }
+
+    .masvendidos-titulo{
+        font-size: 40px;
+        padding: 1rem;
+    }
+
+    .masvendidos-texto{
+        padding: 1rem;
+        font-size: 20px;
+    }
+
+    .masvendidos-encuadre__hijo{
+        padding-top: 0.5rem;
     }
 
     .parallax{
         background-size: 650px;
         background-position-y: center;
         height: 275px;
-    }
-
-    .principal__titulo{
-        font-size: 70px;        
-    }
-
-    .principal__texto{
-        text-align: justify;
-        font-size: medium;
-        padding: 20px;
-    }
-
-    .header__open{
-        display: block;
-        font-size: 32px;
-        color: white;
-        text-decoration: none;
     }
 
 }

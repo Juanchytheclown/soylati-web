@@ -21,6 +21,12 @@
     }
 
     &__subtitle{
+        text-align: center;
+        margin-bottom: 2rem;
+        font-size: 50px;
+    }
+
+    &__subtitle--h3{
         position: absolute;
         right: 0;
         bottom: 0;

@@ -9,10 +9,9 @@ footer{
 }
 
 .eleginos{
-    background-image: linear-gradient(to right, #ceb4e2, #333333);
+    background-color: $color-botones;
     color: white;
     padding: 50px;
-    width: 100%;
 }
 
 .novedades{
@@ -27,6 +26,7 @@ button:not(:disabled) {
     padding: 10px;
     color: white;
     border-radius: 10px;
+    margin-top: 1rem;
 }
 
 .flex{
@@ -57,14 +57,10 @@ button:not(:disabled) {
     color: $color-botones;
 }
 
-.header__open{
-    display: none;
-}
-
 @for $i from 1 through 6 {
     .col-#{$i} {
         width: (100% / 6) * $i;
-        background-color: #8d53b4;
+        background-color: #b68d93;
         border-radius: 10%;
         color: white;
         text-decoration: overline;
