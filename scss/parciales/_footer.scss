@@ -60,7 +60,7 @@ button:not(:disabled) {
 @for $i from 1 through 6 {
     .col-#{$i} {
         width: (100% / 6) * $i;
-        background-color: #b68d93;
+        background-color: #856a78;
         border-radius: 10%;
         color: white;
         text-decoration: overline;
