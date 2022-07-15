@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Contactate con nosotros y seguinos en nuestras redes">
     <meta name="keywords" content="Diseño, Decoracion">
-    <title>La tia contacto</title>
+    <title>La tia catalogo</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
@@ -53,34 +53,82 @@
     <main>
         <section class="formulario">
             <h1>
-                Completa el siguiente formulario
+                Elegi los productos que mas te gusten y agregalos a tu carrito.
             </h1>
             
-            <form>
-                <div>
-                    <label for="nombre">Nombre:</label>
-                    <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre completo">
-                </div>
+            <div>
+                <label for="decoracion">Seleccione un rubro:</label>
+                <select name="categorias" id="categorias">
+                  <option value="Deco Hogar">Deco Hogar</option>
+                  <option value="Textil">Textil</option>
+                  <option value="Cocina">Cocina</option>
+                </select>
+                
+            </div>
 
-                <div>
-                    <label for="edad">Edad:</label>
-                    <input type="number" id="edad" name="edad" placeholder="Ingresar su edad">
-                </div>
-        
-                <div>
-                    <label for="correo">Email:</label>
-                    <input type="email" id="correo" name="correo" placeholder="Ingresar su correo">
-                </div>
-             
-                <div>
-                    <label for="comentario">Comentario:</label>
-                    <textarea placeholder="Ingrese su comentario" name="comentario" id="comentario" cols="20" rows="1"></textarea>
-                </div>
+            <br>
 
-                <br>
+            <div style="background-color: #ceb4e2;">
+                <P>ID: 100</P>
+                <h3>Delantal de cocina</h3>
+                <p>Precio: $1605</p>
+                <p>Categoria: Cocina</p>
+                <button>Agregar al Carro</button>
+            </div>
 
-                <button>Enviar</button>
-            </form>
+            <br>
+
+            <div style="background-color: #ceb4e2;">
+                <P>ID: 101</P>
+                <h3>Pava</h3>
+                <p>Precio: $10500</p>
+                <p>Categoria: Cocina</p>
+                <button>Agregar al Carro</button>
+            </div>
+
+            <br>
+
+            <div style="background-color: #f0d5b0;">
+                <P>ID: 102</P>
+                <h3>Perchero</h3>
+                <p>Precio: $1750</p>
+                <p>Categoria: Hogar</p>
+                <button>Agregar al Carro</button>
+            </div>
+
+            <br>
+
+            <div style="background-color: #f0d5b0;">
+                <P>ID: 103</P>
+                <h3>Lampara</h3>
+                <p>Precio: $2851</p>
+                <p>Categoria: Hogar</p>
+                <button>Agregar al Carro</button>
+            </div>
+
+            <br>
+
+            <div style="background-color: #eed9de;">
+                <P>ID: 104</P>
+                <h3>Almohadon</h3>
+                <p>Precio: $3500</p>
+                <p>Categoria: textil</p>
+                <button>Agregar al Carro</button>
+            </div>
+
+            <br>
+
+            <div style="background-color: #eed9de;">
+                <P>ID: 105</P>
+                <h3>Amigurruni</h3>
+                <p>Precio: $1500</p>
+                <p>Categoria: textil</p>
+                <button>Agregar al Carro</button>
+            </div>
+
+            <button style="background-color: blue;"><a style="color: aliceblue;" class="formulario" href="../Paginas/comprar.html">Finaliza Compra</a></button>
+
+
             
         </section>
 
