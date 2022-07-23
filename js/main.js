@@ -63,7 +63,9 @@ if (productosEnCarro.length > 0){
 
 }*/
 
-const productos = [
+
+//Desafio de DOM
+/*let productos = [
     {"id": 100, "nombre": "delantal", "precio": 1605, "img": "../imagenes/cocina/delantal-removebg.png"},
     {"id": 101, "nombre": "pava", "precio": 10500, "img": "../imagenes/cocina/pava-negra-removebg.png"},
     {"id": 102, "nombre": "perchero", "precio": 1750, "img": "../imagenes/hogar/perchero-removebg.png"},
@@ -95,6 +97,68 @@ productos.forEach((e)=>{
 });
 
 }
-renderizarProductos();
+renderizarProductos();*/
+
+let btnCarritoDelantal = document.getElementById("btnCarritoDelantal")
+let btnCarritoPortarrollo = document.getElementById("btnCarritoPortarrollo")
+let btnCarritoPava = document.getElementById("btnCarritoPava")
+let btnCarritoSet = document.getElementById("btnCarritoSet")
+let btnCarritoMate = document.getElementById("btnCarritoMate")
+let btnCarritoEspeciero = document.getElementById("btnCarritoEspeciero")
+let btnCarritoMolinillo = document.getElementById("btnCarritoMolinillo")
+let btnCarritoPastarella = document.getElementById("btnCarritoPastarella")
+
+
+btnCarritoDelantal.addEventListener("click", () => {
+    btnCarritoDelantal.style.backgroundColor = "#78e08f";
+    alert("Delantal a carrito")
+})
+
+btnCarritoPortarrollo.addEventListener("click", () => {
+    btnCarritoPortarrollo.style.backgroundColor = "#78e08f";
+    alert("Portarrollo a carrito")
+})
+
+btnCarritoPava.addEventListener("click", () => {
+    btnCarritoPava.style.backgroundColor = "#78e08f";
+    alert("Pava Negra a carrito")
+})
+
+btnCarritoSet.addEventListener("click", () => {
+    btnCarritoSet.style.backgroundColor = "#78e08f";
+    alert("Set Nature a carrito")
+})
+
+btnCarritoMate.addEventListener("click", () => {
+    btnCarritoMate.style.backgroundColor = "#78e08f";
+    alert("Mate a carrito")
+})
+
+btnCarritoEspeciero.addEventListener("click", () => {
+    btnCarritoEspeciero.style.backgroundColor = "#78e08f";
+    alert("Especiero a carrito")
+})
+
+btnCarritoMolinillo.addEventListener("click", () => {
+    btnCarritoMolinillo.style.backgroundColor = "#78e08f";
+    alert("Molinillo a carrito")
+})
+
+btnCarritoPastarella.addEventListener("click", () => {
+    btnCarritoPastarella.style.backgroundColor = "#78e08f";
+    alert("Pastarella a carrito")
+})
+
+//function handleClick(){
+    //btnCarritoDelantal.style.backgroundColor = "#78e08f";
+    //alert("Delantal a carrito")
+//}
+
+//function handleClick(){
+    //btnCarritoPortarrollo.style.backgroundColor = "#78e08f";
+    //alert("Portarrollo a carrito")
+//}
+
+
 
 

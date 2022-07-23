@@ -28,12 +28,12 @@
 
     &__subtitle--h3{
         position: absolute;
-        right: 0;
+        left: 0;
         bottom: 0;
         background-color: rgba(0, 0, 0, 0.5);
         color: white;
         padding: 0.5rem 1rem;
-        margin-right: 5px;
+        margin-left: 5px;
         border-radius: 20px;
         font-size: 20px;
     }
@@ -65,7 +65,21 @@
         left: -0.5rem;
         transform: rotate(30deg);
         transition: transform 1s;
-    }    
+    } 
+    
+    &__carrito {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        padding: 0.5rem;
+        margin: 0 5px 5px 0; 
+        border: 2px solid black;
+        border-radius: 50px;
+        font-size: 30px;
+        background-color: aquamarine;
+        cursor: pointer;
+
+    }
 }
 
 #grid-fondo-cocina{
@@ -85,10 +99,10 @@
     background-color: #eed9de;
 }
 
-.grid__item--1:hover{
+/*.grid__item--1:hover{
     transform: rotate(360deg);
     transition: transform 3s;
-}
+}*/
 
 .grid__item--2{
     grid-area: ele2;
