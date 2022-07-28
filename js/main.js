@@ -1,3 +1,168 @@
+let productos = [
+    {id: 100, nombre: "delantal", precio: 1605, img: "src=../imagenes/cocina/delantal-removebg.png"},
+    {id: 101, nombre: "pava", precio: 10500, img: "src=../imagenes/cocina/pava-negra-removebg.png"},
+    {id: 102, nombre: "perchero", precio: 1750, img: "src=../imagenes/hogar/perchero-removebg.png"},
+    {id: 103, nombre: "lampara", precio: 2851, img: "src=../imagenes/hogar/lampara-removebg.png"},
+    {id: 104, nombre: "almohadon", precio: 3500, img: "src=../imagenes/textil/almohadon-removebg.png"},
+    {id: 105, nombre: "amigurruni", precio: 1500, img: "src=../imagenes/textil/amigurumi-amarillo-removebg.png"},
+];
+
+let aux = localStorage.getItem("productosEnCarro");
+let productosEnCarro;
+
+if(!aux){
+    productosEnCarro = [];
+}else{
+    productosEnCarro = JSON.parse(aux)
+    pintarProductosEnCarro()
+}
+
+function pintarListadoProductos() {
+    let aux = "";
+    for (let i = 0; i < productos.length; i++ ){
+        aux = 
+          aux + 
+          `<div onclick="meterAlCarro({id: ${productos[i].id}, nombre: '${productos[i].nombre}', precio: ${productos[i].precio}})" style="cursor: pointer; background-color: #ceb4e2; border: 1px solid black">
+             <h3>Nombre: ${productos[i].nombre}</h3>
+             <span style="background-color: #460080; font-size: 25px; color: white; border-radius: 20%">$ ${productos[i].precio}</span>
+             <p>Categoria: ${productos[i].id}</p>
+             <img ${productos[i].img}>
+          </div>`;
+}
+
+document.getElementById("div-productos").innerHTML = aux;
+}
+
+pintarListadoProductos();
+
+//FUNCIONES DE CARRO
+function meterAlCarro(objetoProducto) {
+    productosEnCarro.push(objetoProducto);
+    localStorage.setItem("productosEnCarro", JSON.stringify(productosEnCarro))
+    pintarProductosEnCarro();
+}
+
+function borrarDelCarro(id) {
+    productosEnCarro.splice(id, 1);
+    localStorage.setItem("productosEnCarro", JSON.stringify(productosEnCarro))
+    pintarProductosEnCarro();
+}
+
+function pintarProductosEnCarro() {
+    let aux = "";
+    for (let i = 0; i < productosEnCarro.length; i++ ){
+        aux = 
+          aux + 
+          `<div style="border: 1px solid black; background-color: lightgreen">
+             <h3>Nombre: ${productosEnCarro[i].nombre}</h3>
+             <span style="background-color: #004400; font-size: 25px; color: white; border-radius: 20%">$ ${productosEnCarro[i].precio}</span>
+             <p>Categoria: ${productosEnCarro[i].id}</p>
+             <p onclick="borrarDelCarro(${i})" style="cursor: pointer;">🗑️</p>
+          </div>`;
+}
+
+document.getElementById("div-carrito").innerHTML = aux;
+}
+
+//EVENTOS EN COCINA.HTML (AGREGA AL CARRO Y CAMBIA DE COLOR ICONO DEL CARRITO)
+let btnCarritoDelantal = document.getElementById("btnCarritoDelantal")
+let btnCarritoPortarrollo = document.getElementById("btnCarritoPortarrollo")
+let btnCarritoPava = document.getElementById("btnCarritoPava")
+let btnCarritoSet = document.getElementById("btnCarritoSet")
+let btnCarritoMate = document.getElementById("btnCarritoMate")
+let btnCarritoEspeciero = document.getElementById("btnCarritoEspeciero")
+let btnCarritoMolinillo = document.getElementById("btnCarritoMolinillo")
+let btnCarritoPastarella = document.getElementById("btnCarritoPastarella")
+
+
+btnCarritoDelantal.addEventListener("click", () => {
+    btnCarritoDelantal.style.backgroundColor = "#78e08f";
+    alert("Delantal a carrito")
+})
+
+btnCarritoPortarrollo.addEventListener("click", () => {
+    btnCarritoPortarrollo.style.backgroundColor = "#78e08f";
+    alert("Portarrollo a carrito")
+})
+
+btnCarritoPava.addEventListener("click", () => {
+    btnCarritoPava.style.backgroundColor = "#78e08f";
+    alert("Pava Negra a carrito")
+})
+
+btnCarritoSet.addEventListener("click", () => {
+    btnCarritoSet.style.backgroundColor = "#78e08f";
+    alert("Set Nature a carrito")
+})
+
+btnCarritoMate.addEventListener("click", () => {
+    btnCarritoMate.style.backgroundColor = "#78e08f";
+    alert("Mate a carrito")
+})
+
+btnCarritoEspeciero.addEventListener("click", () => {
+    btnCarritoEspeciero.style.backgroundColor = "#78e08f";
+    alert("Especiero a carrito")
+})
+
+btnCarritoMolinillo.addEventListener("click", () => {
+    btnCarritoMolinillo.style.backgroundColor = "#78e08f";
+    alert("Molinillo a carrito")
+})
+
+btnCarritoPastarella.addEventListener("click", () => {
+    btnCarritoPastarella.style.backgroundColor = "#78e08f";
+    alert("Pastarella a carrito")
+})
+
+/*function handleClick(){
+    btnCarritoDelantal.style.backgroundColor = "#78e08f";
+    alert("Delantal a carrito")
+}
+
+function handleClick(){
+    btnCarritoPortarrollo.style.backgroundColor = "#78e08f";
+    alert("Portarrollo a carrito")
+}
+
+
+
+
+//SWEET ALERT
+/*function manejeElClick() {
+    Swal.fire({
+      title: 'Suscripcion Exitosa',
+      text: 'Pronto recibiras novedades de',
+      icon: 'success',
+      confirmButtonText: 'Aceptar',
+    });
+  }
+
+  //Toastify
+  function manejeElClick() {
+  Toastify({
+    text: 'Probando toast!',
+    duration: 3000,
+    onclick: () => {
+        Toastify({
+        text: 'Clikeaste un toast!',
+        duration: 1500,
+        position: "left",
+    }).showToast();
+  }
+ }).showToast();
+}*/
+
+//LUXON DATE
+/*const DateTime = luxon.DateTime;
+
+const dt = DateTime.local(2022, 1, 25, 12, 10);
+
+console.log(dt);*/
+
+
+
+//PREENTREGA FINAL 1
 /*class Producto{
     constructor(id, nombre, precio, categoria) {
         this.id = id;
@@ -64,7 +229,7 @@ if (productosEnCarro.length > 0){
 }*/
 
 
-//Desafio de DOM
+//DESAFIO DE DOM
 /*let productos = [
     {"id": 100, "nombre": "delantal", "precio": 1605, "img": "../imagenes/cocina/delantal-removebg.png"},
     {"id": 101, "nombre": "pava", "precio": 10500, "img": "../imagenes/cocina/pava-negra-removebg.png"},
@@ -98,67 +263,3 @@ productos.forEach((e)=>{
 
 }
 renderizarProductos();*/
-
-let btnCarritoDelantal = document.getElementById("btnCarritoDelantal")
-let btnCarritoPortarrollo = document.getElementById("btnCarritoPortarrollo")
-let btnCarritoPava = document.getElementById("btnCarritoPava")
-let btnCarritoSet = document.getElementById("btnCarritoSet")
-let btnCarritoMate = document.getElementById("btnCarritoMate")
-let btnCarritoEspeciero = document.getElementById("btnCarritoEspeciero")
-let btnCarritoMolinillo = document.getElementById("btnCarritoMolinillo")
-let btnCarritoPastarella = document.getElementById("btnCarritoPastarella")
-
-
-btnCarritoDelantal.addEventListener("click", () => {
-    btnCarritoDelantal.style.backgroundColor = "#78e08f";
-    alert("Delantal a carrito")
-})
-
-btnCarritoPortarrollo.addEventListener("click", () => {
-    btnCarritoPortarrollo.style.backgroundColor = "#78e08f";
-    alert("Portarrollo a carrito")
-})
-
-btnCarritoPava.addEventListener("click", () => {
-    btnCarritoPava.style.backgroundColor = "#78e08f";
-    alert("Pava Negra a carrito")
-})
-
-btnCarritoSet.addEventListener("click", () => {
-    btnCarritoSet.style.backgroundColor = "#78e08f";
-    alert("Set Nature a carrito")
-})
-
-btnCarritoMate.addEventListener("click", () => {
-    btnCarritoMate.style.backgroundColor = "#78e08f";
-    alert("Mate a carrito")
-})
-
-btnCarritoEspeciero.addEventListener("click", () => {
-    btnCarritoEspeciero.style.backgroundColor = "#78e08f";
-    alert("Especiero a carrito")
-})
-
-btnCarritoMolinillo.addEventListener("click", () => {
-    btnCarritoMolinillo.style.backgroundColor = "#78e08f";
-    alert("Molinillo a carrito")
-})
-
-btnCarritoPastarella.addEventListener("click", () => {
-    btnCarritoPastarella.style.backgroundColor = "#78e08f";
-    alert("Pastarella a carrito")
-})
-
-//function handleClick(){
-    //btnCarritoDelantal.style.backgroundColor = "#78e08f";
-    //alert("Delantal a carrito")
-//}
-
-//function handleClick(){
-    //btnCarritoPortarrollo.style.backgroundColor = "#78e08f";
-    //alert("Portarrollo a carrito")
-//}
-
-
-
-
