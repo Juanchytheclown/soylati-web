@@ -1,0 +1,73 @@
+.formulario{
+    min-height: 300px;
+    padding: 25px;
+    text-align: center;
+}
+
+.contact {
+    margin-block-end: 5em;
+}
+
+.u-wrapper {
+    max-inline-size: 1232px;
+    margin: 0 auto;
+    padding: 0 1em;
+}
+
+.form {
+    max-inline-size: 550px;
+    margin: auto;
+}
+
+.form label {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: .5em;
+    padding-inline-start: .5em;
+}
+  
+.form input, .form textarea {
+    box-sizing: border-box;
+    width: 100%;
+    font-size: 1rem;
+    padding: .8em;
+    border-radius: .5em;
+    border: 1px solid #858C94;
+}
+.form textarea {
+    margin-block-end: 2em;
+    font-family: inherit;
+}
+  
+input::-webkit-input-placeholder {
+    color: #0F0A0A88;
+}
+
+.btn-form {
+    border-radius: 90px;
+    letter-spacing: 1.25px;
+    background: initial;
+    block-size: 50px;
+    display: block;
+    cursor: pointer;
+    user-select: none;
+    box-sizing: border-box;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 50px;
+    border: 2px solid black;
+    font-weight: bold;
+    padding: 0 1.5em;
+    background-color:$color-botones;
+    color: white;
+}
+
+.btn-form:hover {
+    background-color: aqua;
+    color: black;
+}
+  
+.btn-form.full {
+    width: 100%;
+}

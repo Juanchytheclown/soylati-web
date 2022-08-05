@@ -51,37 +51,23 @@
     </header>
     
     <main>
-        <section class="formulario">
-            <h1>
-                Completa el siguiente formulario
-            </h1>
-            
-            <form>
-                <div>
-                    <label for="nombre">Nombre:</label>
-                    <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre completo">
-                </div>
-
-                <div>
-                    <label for="edad">Edad:</label>
-                    <input type="number" id="edad" name="edad" placeholder="Ingresar su edad">
-                </div>
-        
-                <div>
-                    <label for="correo">Email:</label>
-                    <input type="email" id="correo" name="correo" placeholder="Ingresar su correo">
-                </div>
-             
-                <div>
-                    <label for="comentario">Comentario:</label>
-                    <textarea placeholder="Ingrese su comentario" name="comentario" id="comentario" cols="20" rows="1"></textarea>
-                </div>
-
-                <br>
-
-                <button>Enviar</button>
-            </form>
-            
+        <section class="contact formulario">
+          <div class="u-wrapper">
+            <div class="contact-content">
+               <h1>Completa el siguiente formulario</h1>
+               <br>
+               <form id="form" action="" class="form">
+               <h3 class="tag"><span>HABLEMOS</span></h3>
+               <label for="name">Nombre Completo <span>*</span></label>
+               <input name="name" required type="text" id="name" placeholder="Juan">
+               <label for="email">Correo electrónico <span>*</span></label>
+               <input name="email" type="text" id="email" required placeholder="juan@gmail.com">
+               <label for="message">Mensaje</label>
+               <textarea id="message" name="message" id="" cols="30" rows="10"></textarea>
+               <button id="btn-formulario" class="btn-form full" type="button">enviar mensaje</button>
+              </form>
+            </div>
+          </div>
         </section>
 
         <section class="whatsapp">
@@ -94,9 +80,9 @@
         <section class="votacion">
            
           <h2>Que productos te gustan mas?</h2>
-             <button class="votacion--cocina">Cocina</button>
-             <button class="votacion--hogar">Deco-Hogar</button>
-             <button class="votacion--textil">Textil</button>
+             <button class="votacion--cocina menu-bajo__hijo">Cocina</button>
+             <button class="votacion--hogar menu-bajo__hijo">Deco-Hogar</button>
+             <button class="votacion--textil menu-bajo__hijo">Textil</button>
            
         </section>
 
@@ -110,7 +96,7 @@
               <div>
                 <label for="correo">Email:</label>
                 <input type="email" id="correo" name="correo" placeholder="Ingresar su correo">
-                <button>Enviar</button>
+                <button class="menu-bajo__hijo">Enviar</button>
               </div>
             </form>
         </div>
@@ -168,6 +154,7 @@
            
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <script src="../js/main.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/formulario.js"></script>
 </body>
 </html>

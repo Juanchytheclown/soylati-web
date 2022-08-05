@@ -1,265 +1,130 @@
-let productos = [
-    {id: 100, nombre: "delantal", precio: 1605, img: "src=../imagenes/cocina/delantal-removebg.png"},
-    {id: 101, nombre: "pava", precio: 10500, img: "src=../imagenes/cocina/pava-negra-removebg.png"},
-    {id: 102, nombre: "perchero", precio: 1750, img: "src=../imagenes/hogar/perchero-removebg.png"},
-    {id: 103, nombre: "lampara", precio: 2851, img: "src=../imagenes/hogar/lampara-removebg.png"},
-    {id: 104, nombre: "almohadon", precio: 3500, img: "src=../imagenes/textil/almohadon-removebg.png"},
-    {id: 105, nombre: "amigurruni", precio: 1500, img: "src=../imagenes/textil/amigurumi-amarillo-removebg.png"},
-];
-
-let aux = localStorage.getItem("productosEnCarro");
-let productosEnCarro;
-
-if(!aux){
-    productosEnCarro = [];
-}else{
-    productosEnCarro = JSON.parse(aux)
-    pintarProductosEnCarro()
-}
-
-function pintarListadoProductos() {
-    let aux = "";
-    for (let i = 0; i < productos.length; i++ ){
-        aux = 
-          aux + 
-          `<div onclick="meterAlCarro({id: ${productos[i].id}, nombre: '${productos[i].nombre}', precio: ${productos[i].precio}})" style="cursor: pointer; background-color: #ceb4e2; border: 1px solid black">
-             <h3>Nombre: ${productos[i].nombre}</h3>
-             <span style="background-color: #460080; font-size: 25px; color: white; border-radius: 20%">$ ${productos[i].precio}</span>
-             <p>Categoria: ${productos[i].id}</p>
-             <img ${productos[i].img}>
-          </div>`;
-}
-
-document.getElementById("div-productos").innerHTML = aux;
-}
-
-pintarListadoProductos();
-
-//FUNCIONES DE CARRO
-function meterAlCarro(objetoProducto) {
-    productosEnCarro.push(objetoProducto);
-    localStorage.setItem("productosEnCarro", JSON.stringify(productosEnCarro))
-    pintarProductosEnCarro();
-}
-
-function borrarDelCarro(id) {
-    productosEnCarro.splice(id, 1);
-    localStorage.setItem("productosEnCarro", JSON.stringify(productosEnCarro))
-    pintarProductosEnCarro();
-}
-
-function pintarProductosEnCarro() {
-    let aux = "";
-    for (let i = 0; i < productosEnCarro.length; i++ ){
-        aux = 
-          aux + 
-          `<div style="border: 1px solid black; background-color: lightgreen">
-             <h3>Nombre: ${productosEnCarro[i].nombre}</h3>
-             <span style="background-color: #004400; font-size: 25px; color: white; border-radius: 20%">$ ${productosEnCarro[i].precio}</span>
-             <p>Categoria: ${productosEnCarro[i].id}</p>
-             <p onclick="borrarDelCarro(${i})" style="cursor: pointer;">🗑️</p>
-          </div>`;
-}
-
-document.getElementById("div-carrito").innerHTML = aux;
-}
-
-//EVENTOS EN COCINA.HTML (AGREGA AL CARRO Y CAMBIA DE COLOR ICONO DEL CARRITO)
-let btnCarritoDelantal = document.getElementById("btnCarritoDelantal")
-let btnCarritoPortarrollo = document.getElementById("btnCarritoPortarrollo")
-let btnCarritoPava = document.getElementById("btnCarritoPava")
-let btnCarritoSet = document.getElementById("btnCarritoSet")
-let btnCarritoMate = document.getElementById("btnCarritoMate")
-let btnCarritoEspeciero = document.getElementById("btnCarritoEspeciero")
-let btnCarritoMolinillo = document.getElementById("btnCarritoMolinillo")
-let btnCarritoPastarella = document.getElementById("btnCarritoPastarella")
-
-
-btnCarritoDelantal.addEventListener("click", () => {
-    btnCarritoDelantal.style.backgroundColor = "#78e08f";
-    alert("Delantal a carrito")
-})
-
-btnCarritoPortarrollo.addEventListener("click", () => {
-    btnCarritoPortarrollo.style.backgroundColor = "#78e08f";
-    alert("Portarrollo a carrito")
-})
-
-btnCarritoPava.addEventListener("click", () => {
-    btnCarritoPava.style.backgroundColor = "#78e08f";
-    alert("Pava Negra a carrito")
-})
-
-btnCarritoSet.addEventListener("click", () => {
-    btnCarritoSet.style.backgroundColor = "#78e08f";
-    alert("Set Nature a carrito")
-})
-
-btnCarritoMate.addEventListener("click", () => {
-    btnCarritoMate.style.backgroundColor = "#78e08f";
-    alert("Mate a carrito")
-})
-
-btnCarritoEspeciero.addEventListener("click", () => {
-    btnCarritoEspeciero.style.backgroundColor = "#78e08f";
-    alert("Especiero a carrito")
-})
-
-btnCarritoMolinillo.addEventListener("click", () => {
-    btnCarritoMolinillo.style.backgroundColor = "#78e08f";
-    alert("Molinillo a carrito")
-})
-
-btnCarritoPastarella.addEventListener("click", () => {
-    btnCarritoPastarella.style.backgroundColor = "#78e08f";
-    alert("Pastarella a carrito")
-})
-
-/*function handleClick(){
-    btnCarritoDelantal.style.backgroundColor = "#78e08f";
-    alert("Delantal a carrito")
-}
-
-function handleClick(){
-    btnCarritoPortarrollo.style.backgroundColor = "#78e08f";
-    alert("Portarrollo a carrito")
-}
-
-
-
-
-//SWEET ALERT
-/*function manejeElClick() {
-    Swal.fire({
-      title: 'Suscripcion Exitosa',
-      text: 'Pronto recibiras novedades de',
-      icon: 'success',
-      confirmButtonText: 'Aceptar',
-    });
-  }
-
-  //Toastify
-  function manejeElClick() {
-  Toastify({
-    text: 'Probando toast!',
-    duration: 3000,
-    onclick: () => {
-        Toastify({
-        text: 'Clikeaste un toast!',
-        duration: 1500,
-        position: "left",
-    }).showToast();
-  }
- }).showToast();
-}*/
-
-//LUXON DATE
-/*const DateTime = luxon.DateTime;
-
-const dt = DateTime.local(2022, 1, 25, 12, 10);
-
-console.log(dt);*/
-
-
-
-//PREENTREGA FINAL 1
-/*class Producto{
-    constructor(id, nombre, precio, categoria) {
-        this.id = id;
-        this.nombre = nombre;
-        this.precio = precio;
-        this.categoria = categoria;
-    }
-    mostrarproducto(){
-        return " id: " + this.id + " " + 
-        " precio: " + this.precio + " " + " producto: " + 
-        this.nombre + "\n";
-    }
-}
-
-function comprar(nombre, email, tel, productosEnCarro) {
-    let cant = productosEnCarro.reduce((acc, item) => item.precio + acc, 0);
-    alert("Gracias " + nombre + " por tu compra. \n Total: $" + cant);
-}
-
-let productos = [
-    new Producto(100, "delantal", 1605, "cocina"),
-    new Producto(101, "pava", 10500, "cocina"),
-    new Producto(102, "perchero", 1750, "hogar"),
-    new Producto(103, "lampara", 2851, "hogar"),
-    new Producto(104, "almohadon", 3500, "textil"),
-    new Producto(105, "amigurruni", 1500, "textil")
-];
-
-let categorias = ["cocina", "hogar", "textil"];
-
-let productosEnCarro = [];
-
-let categoria = "";
-
-while (categoria != "salir" && categoria != null){
-    let aux = categorias.join (", ");
-    categoria = prompt("ingrese una categoria para comprar o ingrese salir:  \n(" + aux + ")")
-    if (categoria != "salir" && categoria != null){
-        let productosFiltradoPorCategoria = productos.filter((item) => (item.categoria == categoria));
-        let cartel = "";
-        for(let i = 0; i < productosFiltradoPorCategoria.length; i++ ){
-
-            cartel += productosFiltradoPorCategoria[i].mostrarproducto();
-            
-        }
-        let idSelccionado = parseInt(prompt("seleccione ID del producto que quiere comprar \n\n" + cartel));
-        let productoParaCarro = productosFiltradoPorCategoria.find((item) => item.id == idSelccionado);
-
-        if (productoParaCarro){
-            productosEnCarro.push(productoParaCarro)
-        }
-
-
-    }
-}
-
-if (productosEnCarro.length > 0){
-    alert("ingrese sus datos para terminar su compra");
-    let nombre = prompt("ingrese su nombre");
-    let tel = prompt("ingrese su tel");
-    let email = prompt("ingrese su email");
-    comprar(nombre, email, tel, productosEnCarro)
-
-}*/
-
-
-//DESAFIO DE DOM
-/*let productos = [
-    {"id": 100, "nombre": "delantal", "precio": 1605, "img": "../imagenes/cocina/delantal-removebg.png"},
-    {"id": 101, "nombre": "pava", "precio": 10500, "img": "../imagenes/cocina/pava-negra-removebg.png"},
-    {"id": 102, "nombre": "perchero", "precio": 1750, "img": "../imagenes/hogar/perchero-removebg.png"},
-    {"id": 103, "nombre": "lampara", "precio": 2851, "img": "../imagenes/hogar/lampara-removebg.png"},
-    {"id": 104, "nombre": "almohadon", "precio": 3500, "img": "../imagenes/textil/almohadon-removebg.png"},
-    {"id": 105, "nombre": "amigurruni", "precio": 1500, "img": "../imagenes/textil/amigurumi-amarillo-removebg.png"},
-]
-
-const carrito = []
-
-function renderizarProductos(){
-    let tienda = document.getElementById("tienda");
-
-productos.forEach((e)=>{
-    let productoHTML = 
-    `<div class="col-12 col-md-4 mb-5 d-flex justify-content-center">
-    <div class="card" style="width: 18rem;">
-    <img src="${e.img}" class="card-img-top" alt="catalogo">
-    <div class="card-body">
-      <h5 class="card-title">${e.nombre}</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <p class="card-text">${e.precio}$</p>
-      <button class="btn btn-primary">Añadir al carrito</button>
-    </div>
-  </div>`
-  tienda.innerHTML += productoHTML
-  tienda.style.backgroundColor="#ceb4e2";
-
+const addToShoppingCartButtons = document.querySelectorAll('.addToCart');
+addToShoppingCartButtons.forEach((addToCartButton) => {
+  addToCartButton.addEventListener('click', addToCartClicked);
 });
 
+const comprarButton = document.querySelector('.comprarButton');
+comprarButton.addEventListener('click', comprarButtonClicked);
+
+const shoppingCartItemsContainer = document.querySelector(
+  '.shoppingCartItemsContainer'
+);
+
+function addToCartClicked(event) {
+  const button = event.target;
+  const grid__item = button.closest('.grid__item');
+
+  const itemTitle = grid__item.querySelector('.item-title').textContent;
+  const itemPrice = grid__item.querySelector('.item-price').textContent;
+  const itemImage = grid__item.querySelector('.item-image').src;
+
+  addItemToShoppingCart(itemTitle, itemPrice, itemImage);
 }
-renderizarProductos();*/
+
+function addItemToShoppingCart(itemTitle, itemPrice, itemImage) {
+  const elementsTitle = shoppingCartItemsContainer.getElementsByClassName(
+    'shoppingCartItemTitle'
+  );
+  for (let i = 0; i < elementsTitle.length; i++) {
+    if (elementsTitle[i].innerText === itemTitle) {
+      let elementQuantity = elementsTitle[i].parentElement.parentElement.parentElement.querySelector(
+        '.shoppingCartItemQuantity'
+      );
+      elementQuantity.value++;
+      updateShoppingCartTotal();
+      return;
+    }
+  }
+
+  const shoppingCartRow = document.createElement('div');
+  const shoppingCartContent = `
+  <div class="row shoppingCartItem">
+        <div class="col-6">
+            <div class="shopping-cart-item d-flex align-items-center h-100 border-bottom pb-2 pt-3">
+                <img src=${itemImage} class="shopping-cart-image">
+                <h6 class="shopping-cart-item-title shoppingCartItemTitle text-truncate ml-3 mb-0">${itemTitle}</h6>
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="shopping-cart-price d-flex align-items-center h-100 border-bottom pb-2 pt-3">
+                <p class="item-price mb-0 shoppingCartItemPrice">${itemPrice}</p>
+            </div>
+        </div>
+        <div class="col-4">
+            <div
+                class="shopping-cart-quantity d-flex justify-content-between align-items-center h-100 border-bottom pb-2 pt-3">
+                <input class="shopping-cart-quantity-input shoppingCartItemQuantity" type="number"
+                    value="1">
+                <button class="btn btn-danger buttonDelete" type="button">X</button>
+            </div>
+        </div>
+    </div>`;
+  shoppingCartRow.innerHTML = shoppingCartContent;
+  shoppingCartItemsContainer.append(shoppingCartRow);
+
+  shoppingCartRow
+    .querySelector('.buttonDelete')
+    .addEventListener('click', removeShoppingCartItem);
+
+  shoppingCartRow
+    .querySelector('.shoppingCartItemQuantity')
+    .addEventListener('change', quantityChanged);
+
+  updateShoppingCartTotal();
+}
+
+function updateShoppingCartTotal() {
+  let total = 0;
+  const shoppingCartTotal = document.querySelector('.shoppingCartTotal');
+
+  const shoppingCartItems = document.querySelectorAll('.shoppingCartItem');
+
+  shoppingCartItems.forEach((shoppingCartItem) => {
+    const shoppingCartItemPriceElement = shoppingCartItem.querySelector(
+      '.shoppingCartItemPrice'
+    );
+    const shoppingCartItemPrice = Number(
+      shoppingCartItemPriceElement.textContent.replace('$', '')
+    );
+    const shoppingCartItemQuantityElement = shoppingCartItem.querySelector(
+      '.shoppingCartItemQuantity'
+    );
+    const shoppingCartItemQuantity = Number(
+      shoppingCartItemQuantityElement.value
+    );
+    total = total + shoppingCartItemPrice * shoppingCartItemQuantity;
+    console.log(total)
+  });
+  shoppingCartTotal.innerHTML = `$${total.toFixed(2)}`;
+}
+
+function removeShoppingCartItem(event) {
+  const buttonClicked = event.target;
+  buttonClicked.closest('.shoppingCartItem').remove();
+  updateShoppingCartTotal();
+}
+
+function quantityChanged(event) {
+  const input = event.target;
+  input.value <= 0 ? (input.value = 1) : null;
+  updateShoppingCartTotal();
+}
+
+function comprarButtonClicked() {
+  shoppingCartItemsContainer.innerHTML = '';
+  updateShoppingCartTotal();
+}
+
+//LIBRERIA SWEET ALERT - COCINA
+const btn = document.querySelector('#btn-success')
+btn.addEventListener('click', () => {
+
+    Swal.fire({
+        title: 'Compra exitosa!',
+        text: 'Recibiras tu pedido dentro de 3 dias habiles',
+        icon: 'success',
+        confirmButtonText: 'OK'
+})
+})
+
+//LOCAL STORAGE

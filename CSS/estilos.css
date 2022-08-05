@@ -9,11 +9,6 @@ body {
   background-color: #f1eced;
 }
 
-.formulario {
-  min-height: 300px;
-  padding: 25px;
-}
-
 .whatsapp {
   min-height: 200px;
   padding: 25px;
@@ -23,6 +18,7 @@ body {
 #whatsapp-boton {
   padding: 25px;
   background-color: #378646;
+  color: white;
 }
 
 .votacion, .votacion--cocina, .votacion--hogar, .votacion--textil {
@@ -90,6 +86,10 @@ body {
 .navbar-light .navbar-nav .nav-link {
   color: white;
   text-align: center;
+}
+
+.navbar-toggler {
+  background-color: #856a78;
 }
 
 .container-fluid {
@@ -191,7 +191,7 @@ iframe {
 }
 
 .grid__title {
-  font-size: 60px;
+  font-size: 30px;
   margin-bottom: 2rem;
   color: black;
 }
@@ -277,10 +277,11 @@ iframe {
   background-color: #eed9de;
 }
 
-/*.grid__item--1:hover{
-    transform: rotate(360deg);
-    transition: transform 3s;
-}*/
+.grid__item--1:hover {
+  transform: rotate(360deg);
+  transition: transform 3s;
+}
+
 .grid__item--2 {
   grid-area: ele2;
   background-color: #f0d5b0;
@@ -377,12 +378,38 @@ footer {
   width: 100%;
 }
 
-button:not(:disabled) {
-  background-color: #856a78;
-  padding: 10px;
+.btn-success {
+  color: #fff;
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
+.swal2-container.swal2-center > .swal2-popup {
+  background-color: #300864;
+  color: #fff;
+  border-radius: 50%;
+}
+
+.h3, h3 {
+  font-size: 20px;
+}
+
+.total-size {
+  font-size: 30px;
+}
+
+.ml-auto, .mx-auto {
+  margin-left: auto;
+}
+
+.ml-4, .mx-4 {
+  margin-left: 1.5rem;
+  background-color: rgba(0, 0, 0, 0.5);
   color: white;
-  border-radius: 10px;
-  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  margin-left: 5px;
+  border-radius: 20px;
+  font-size: 20px;
 }
 
 .flex {
@@ -411,54 +438,6 @@ button:not(:disabled) {
 .hover-menu :hover {
   background-color: #ffffff;
   color: #856a78;
-}
-
-.col-1 {
-  width: 16.66667%;
-  background-color: #856a78;
-  border-radius: 10%;
-  color: white;
-  text-decoration: overline;
-}
-
-.col-2 {
-  width: 33.33333%;
-  background-color: #856a78;
-  border-radius: 10%;
-  color: white;
-  text-decoration: overline;
-}
-
-.col-3 {
-  width: 50%;
-  background-color: #856a78;
-  border-radius: 10%;
-  color: white;
-  text-decoration: overline;
-}
-
-.col-4 {
-  width: 66.66667%;
-  background-color: #856a78;
-  border-radius: 10%;
-  color: white;
-  text-decoration: overline;
-}
-
-.col-5 {
-  width: 83.33333%;
-  background-color: #856a78;
-  border-radius: 10%;
-  color: white;
-  text-decoration: overline;
-}
-
-.col-6 {
-  width: 100%;
-  background-color: #856a78;
-  border-radius: 10%;
-  color: white;
-  text-decoration: overline;
 }
 
 /* Usando el mapa */
@@ -571,5 +550,106 @@ a {
     background-position-y: center;
     height: 275px;
   }
+}
+
+/* ? SHOPPING CART */
+.shopping-cart-items {
+  padding: 20px 0px;
+}
+
+.shopping-cart-header {
+  border-bottom: 1px solid #ccc;
+}
+
+.shopping-cart-image {
+  max-width: 80px;
+  border-radius: 20px;
+}
+
+.shopping-cart-quantity-input {
+  max-width: 45px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #eee;
+  padding: 5px;
+}
+
+.shopping-cart-total {
+  min-height: 96px;
+}
+
+.formulario {
+  min-height: 300px;
+  padding: 25px;
+  text-align: center;
+}
+
+.contact {
+  margin-block-end: 5em;
+}
+
+.u-wrapper {
+  max-inline-size: 1232px;
+  margin: 0 auto;
+  padding: 0 1em;
+}
+
+.form {
+  max-inline-size: 550px;
+  margin: auto;
+}
+
+.form label {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: .5em;
+  padding-inline-start: .5em;
+}
+
+.form input, .form textarea {
+  box-sizing: border-box;
+  width: 100%;
+  font-size: 1rem;
+  padding: .8em;
+  border-radius: .5em;
+  border: 1px solid #858C94;
+}
+
+.form textarea {
+  margin-block-end: 2em;
+  font-family: inherit;
+}
+
+input::-webkit-input-placeholder {
+  color: #0F0A0A88;
+}
+
+.btn-form {
+  border-radius: 90px;
+  letter-spacing: 1.25px;
+  background: initial;
+  block-size: 50px;
+  display: block;
+  cursor: pointer;
+  user-select: none;
+  box-sizing: border-box;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 50px;
+  border: 2px solid black;
+  font-weight: bold;
+  padding: 0 1.5em;
+  background-color: #856a78;
+  color: white;
+}
+
+.btn-form:hover {
+  background-color: aqua;
+  color: black;
+}
+
+.btn-form.full {
+  width: 100%;
 }
 /*# sourceMappingURL=estilos.css.map */

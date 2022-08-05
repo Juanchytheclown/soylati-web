@@ -9,7 +9,7 @@
     }
 
     &__title {
-        font-size: 60px;
+        font-size: 30px;
         margin-bottom: 2rem;
         color: rgb(0, 0, 0);
     }
@@ -99,10 +99,10 @@
     background-color: #eed9de;
 }
 
-/*.grid__item--1:hover{
+.grid__item--1:hover{
     transform: rotate(360deg);
     transition: transform 3s;
-}*/
+}
 
 .grid__item--2{
     grid-area: ele2;

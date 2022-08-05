@@ -21,12 +21,41 @@ footer{
     width: 100%;
 }
 
-button:not(:disabled) {
-    background-color: $color-botones;
-    padding: 10px;
+
+.btn-success {
+    color: #fff;
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+//Sweet Alert
+.swal2-container.swal2-center>.swal2-popup {
+    background-color: #300864;
+    color: #fff;
+    border-radius: 50%;
+}
+
+
+.h3, h3 {
+    font-size: 20px;
+}
+
+.total-size {
+    font-size: 30px;
+}
+
+.ml-auto, .mx-auto {
+    margin-left: auto;
+}
+
+.ml-4, .mx-4 {
+    margin-left: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.5);
     color: white;
-    border-radius: 10px;
-    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    margin-left: 5px;
+    border-radius: 20px;
+    font-size: 20px;
 }
 
 .flex{
@@ -55,16 +84,6 @@ button:not(:disabled) {
 .hover-menu :hover{
     background-color: #ffffff;
     color: $color-botones;
-}
-
-@for $i from 1 through 6 {
-    .col-#{$i} {
-        width: (100% / 6) * $i;
-        background-color: #856a78;
-        border-radius: 10%;
-        color: white;
-        text-decoration: overline;
-    }
 }
 
 $redes: ( 
