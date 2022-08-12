@@ -1,3 +1,40 @@
+//FETCH
+function clickEnProducto(id){
+  alert('click en ' + id)
+}
+
+fetch('../data.json')
+.then((resinicial) => resinicial.json())
+.then((res) => {
+  const miArray = res;
+
+  let htmlAux = '';
+  for (let i = 0; i < miArray.length; i++) {
+    htmlAux =
+      htmlAux +
+        `<div class="container">
+        <div class="row align-items-start">
+          <div id="grid-fondo-cocina-fetch" class="col">
+          <h3>${miArray[i].name}</h3>
+          <h4>$${miArray[i].price}</h4>
+          <img ${miArray[i].img}>
+          <img ${miArray[i].logo} width="100" height="50">
+          </div>
+          <div id="grid-fondo-cocina-fetch" class="col">
+          <h3>${miArray[i].name}</h3>
+          <h4>$${miArray[i].price}</h4>
+          <img ${miArray[i].img}>
+          <img ${miArray[i].logo} width="100" height="50">
+          </div>`;
+  }
+  document.getElementById('listadoDeProductos').innerHTML = htmlAux;
+})
+    .catch((e) => {
+      console.log(e);
+});
+
+//FIN DE FETCH
+
 const addToShoppingCartButtons = document.querySelectorAll('.addToCart');
 addToShoppingCartButtons.forEach((addToCartButton) => {
   addToCartButton.addEventListener('click', addToCartClicked);
@@ -6,9 +43,7 @@ addToShoppingCartButtons.forEach((addToCartButton) => {
 const comprarButton = document.querySelector('.comprarButton');
 comprarButton.addEventListener('click', comprarButtonClicked);
 
-const shoppingCartItemsContainer = document.querySelector(
-  '.shoppingCartItemsContainer'
-);
+const shoppingCartItemsContainer = document.querySelector('.shoppingCartItemsContainer');
 
 function addToCartClicked(event) {
   const button = event.target;
@@ -71,6 +106,7 @@ function addItemToShoppingCart(itemTitle, itemPrice, itemImage) {
     .addEventListener('change', quantityChanged);
 
   updateShoppingCartTotal();
+
 }
 
 function updateShoppingCartTotal() {
@@ -127,4 +163,3 @@ btn.addEventListener('click', () => {
 })
 })
 
-//LOCAL STORAGE
