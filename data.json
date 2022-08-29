@@ -1,10 +1,10 @@
 [
-    {"name": "Delantal Negro", "price": 16050, "id": 1, "img": "src=../imagenes/cocina/delantal-removebg.png", "logo": "src=../Imagenes/hot-sale.png"},
-    {"name": "Portarrollo", "price": 700, "id": 2, "img": "src=../imagenes/cocina/portarrollo-removebg.png", "logo": "src=../Imagenes/hot-sale.png"},  
-    {"name": "Pava Negra", "price": 10500, "id": 3, "img": "src=../imagenes/cocina/pava-negra-removebg.png", "logo": "src=../Imagenes/hot-sale.png"}, 
-    {"name": "Set Nature", "price": 3500, "id": 4, "img": "src=../imagenes/cocina/set-nature-removebg.png", "logo": "src=../Imagenes/hot-sale.png"}, 
-    {"name": "Mate Verde", "price": 4851, "id": 5, "img": "src=../imagenes/cocina/mate-verde-removebg.png", "logo": "src=../Imagenes/hot-sale.png"}, 
-    {"name": "Especiero", "price": 1200, "id": 6, "img": "src=../imagenes/cocina/especiero-removebg.png", "logo": "src=../Imagenes/hot-sale.png"}, 
-    {"name": "Molinillo", "price": 4750, "id": 7, "img": "src=../imagenes/cocina/molinillo-removebg.png", "logo": "src=../Imagenes/hot-sale.png"}, 
-    {"name": "Pastarella", "price": 8500, "id": 8, "img": "src=../imagenes/cocina/pastarella-removebg.png", "logo": "src=../Imagenes/hot-sale.png"} 
+    {"name": "Delantal", "price": 16050, "id": 1, "img": "../Imagenes/Cocina/delantal-removebg.png", "logo": "../Imagenes/hot-sale.png"},
+    {"name": "Portarrollo", "price": 700, "id": 2, "img": "../Imagenes/Cocina/portarrollo-removebg.png", "logo": "../Imagenes/hot-sale.png"},  
+    {"name": "Pava", "price": 10500, "id": 3, "img": "../Imagenes/Cocina/pava-negra-removebg.png", "logo": "../Imagenes/hot-sale.png"}, 
+    {"name": "SetNature", "price": 3500, "id": 4, "img": "../Imagenes/Cocina/set-nature-removebg.png", "logo": "../Imagenes/hot-sale.png"}, 
+    {"name": "MateVerde", "price": 4851, "id": 5, "img": "../Imagenes/Cocina/mate-verde-removebg.png", "logo": "../Imagenes/hot-sale.png"}, 
+    {"name": "Especiero", "price": 1200, "id": 6, "img": "../Imagenes/Cocina/especiero-removebg.png", "logo": "../Imagenes/hot-sale.png"}, 
+    {"name": "Molinillo", "price": 4750, "id": 7, "img": "../Imagenes/Cocina/molinillo-removebg.png", "logo": "../Imagenes/hot-sale.png"}, 
+    {"name": "Pastarella", "price": 8500, "id": 8, "img": "../Imagenes/Cocina/pastarella-removebg.png", "logo": "../Imagenes/hot-sale.png"} 
 ]

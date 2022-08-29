@@ -1,48 +1,52 @@
-//FETCH
-function clickEnProducto(id){
-  alert('click en ' + id)
+//Defino una clase para mis productos
+class Materiales {
+  constructor (id, name, price, img) {
+    this.id = id;
+    this.name = name;
+    this.price = price;
+    this.img = img;
+  }
 }
 
+//Creo array vacio
+let productos = [];
+let carrito = [];
+
+//FETCH
 fetch('../data.json')
 .then((resinicial) => resinicial.json())
 .then((res) => {
   const miArray = res;
-
+  miArray.forEach(element => {
+    productos.push(new Materiales(element.id, element.name, element.price, element.img))
+  });
   let htmlAux = '';
   for (let i = 0; i < miArray.length; i++) {
     htmlAux =
       htmlAux +
-        `<div class="container">
-        <div class="row align-items-start">
-          <div id="grid-fondo-cocina-fetch" class="col">
-          <h3>${miArray[i].name}</h3>
-          <h4>$${miArray[i].price}</h4>
-          <img ${miArray[i].img}>
-          <img ${miArray[i].logo} width="100" height="50">
-          </div>
-          <div id="grid-fondo-cocina-fetch" class="col">
-          <h3>${miArray[i].name}</h3>
-          <h4>$${miArray[i].price}</h4>
-          <img ${miArray[i].img}>
-          <img ${miArray[i].logo} width="100" height="50">
-          </div>`;
+        `<div id="grid-fondo-cocina" class="grid__item grid__item--${i}">
+        <h3 class="item-title">${miArray[i].name}</h3>
+        <h4 class="grid__subtitle--h3 item-price">$${miArray[i].price}</h4>
+        <img class="item-image" src="${miArray[i].img}" alt="${miArray[i].name}">
+        <img class="grid__img" src="${miArray[i].logo}" alt="hot-sale" width="100" height="50">
+        <span id=${miArray[i].id} class="jam jam-shopping-cart grid__carrito addToCart"></span>
+        </div>`;
   }
   document.getElementById('listadoDeProductos').innerHTML = htmlAux;
+  const addToShoppingCartButtons = document.querySelectorAll('.addToCart');
+  addToShoppingCartButtons.forEach((addToCartButton) => {
+  addToCartButton.addEventListener('click', addToCartClicked);
+});
+checkCarrito()
 })
     .catch((e) => {
-      console.log(e);
 });
+
 
 //FIN DE FETCH
 
-const addToShoppingCartButtons = document.querySelectorAll('.addToCart');
-addToShoppingCartButtons.forEach((addToCartButton) => {
-  addToCartButton.addEventListener('click', addToCartClicked);
-});
-
 const comprarButton = document.querySelector('.comprarButton');
 comprarButton.addEventListener('click', comprarButtonClicked);
-
 const shoppingCartItemsContainer = document.querySelector('.shoppingCartItemsContainer');
 
 function addToCartClicked(event) {
@@ -53,7 +57,28 @@ function addToCartClicked(event) {
   const itemPrice = grid__item.querySelector('.item-price').textContent;
   const itemImage = grid__item.querySelector('.item-image').src;
 
+
+  //Matchear entre producto seleccionado y producto de lista
+  const existe = productos.find((prod) => prod.name === itemTitle);
+  if (existe) {
+    carrito.push(existe)
+  }
+
   addItemToShoppingCart(itemTitle, itemPrice, itemImage);
+
+  //Guardo en LocalStorage lo que el usuario agrega al carro
+  localStorage.setItem('carrito', JSON.stringify(carrito))
+}
+
+//Creo una funcion que busca en LocalStorage el carrito del cliente y lo empuja a la funcion del carro
+function checkCarrito () {
+  const userCarrito = (JSON.parse(localStorage.getItem('carrito')))
+  carrito.push(...userCarrito)
+  if (userCarrito) {
+    userCarrito.forEach(prod => {
+      addItemToShoppingCart(prod.name, prod.price, prod.img);
+    })
+  }
 }
 
 function addItemToShoppingCart(itemTitle, itemPrice, itemImage) {
@@ -70,10 +95,9 @@ function addItemToShoppingCart(itemTitle, itemPrice, itemImage) {
       return;
     }
   }
-
   const shoppingCartRow = document.createElement('div');
   const shoppingCartContent = `
-  <div class="row shoppingCartItem">
+  <div class="row shoppingCartItem ${itemTitle}">
         <div class="col-6">
             <div class="shopping-cart-item d-flex align-items-center h-100 border-bottom pb-2 pt-3">
                 <img src=${itemImage} class="shopping-cart-image">
@@ -90,7 +114,7 @@ function addItemToShoppingCart(itemTitle, itemPrice, itemImage) {
                 class="shopping-cart-quantity d-flex justify-content-between align-items-center h-100 border-bottom pb-2 pt-3">
                 <input class="shopping-cart-quantity-input shoppingCartItemQuantity" type="number"
                     value="1">
-                <button class="btn btn-danger buttonDelete" type="button">X</button>
+                <button id=${itemTitle} class="btn btn-danger buttonDelete" type="button">X</button>
             </div>
         </div>
     </div>`;
@@ -129,14 +153,20 @@ function updateShoppingCartTotal() {
       shoppingCartItemQuantityElement.value
     );
     total = total + shoppingCartItemPrice * shoppingCartItemQuantity;
-    console.log(total)
   });
   shoppingCartTotal.innerHTML = `$${total.toFixed(2)}`;
+  //Guardo en LocalStorage lo que el usuario agrega al carro
+  localStorage.setItem('carrito', JSON.stringify(carrito))
 }
 
 function removeShoppingCartItem(event) {
   const buttonClicked = event.target;
   buttonClicked.closest('.shoppingCartItem').remove();
+  const item = carrito.find((prod) => prod.name === buttonClicked.id)
+  if (item) {
+    const indice = carrito.indexOf(item)
+    carrito.splice(indice, 1)
+  }
   updateShoppingCartTotal();
 }
 
